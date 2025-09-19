@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Admin User</title>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .button {
+            background: #3b82f6;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px 0;
+            width: 100%;
+        }
+        .button:hover {
+            background: #2563eb;
+        }
+        .success {
+            background: #d1fae5;
+            color: #065f46;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 15px 0;
+        }
+        .error {
+            background: #fee2e2;
+            color: #991b1b;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 15px 0;
+        }
+        .info {
+            background: #dbeafe;
+            color: #1e40af;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔐 Create Admin User</h1>
+        <p>This will create your admin user account in Supabase Auth.</p>
+        
+        <div class="info">
+            <strong>Credentials:</strong><br>
+            Email: girishiyerr@gmail.com<br>
+            Password: Yofreak@19
+        </div>
+        
+        <button class="button" onclick="createUser()">Create Admin User</button>
+        
+        <div id="result"></div>
+        
+        <div class="info">
+            <strong>After creating the user:</strong><br>
+            1. Go to your portfolio admin page<br>
+            2. Use the credentials above to login<br>
+            3. You should now have access to the dashboard
+        </div>
+    </div>
+
+    <script>
+        const supabaseUrl = 'https://toktswgyrgvybewyxzoo.supabase.co'
+        const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRva3Rzd2d5cmd2eWJld3l4em9vIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTgyODk0MjEsImV4cCI6MjA3Mzg2NTQyMX0.HlDshaaYkcRRv6FNploXtdvEFy05Jblb7xJax1OruC4'
+        
+        const supabase = window.supabase.createClient(supabaseUrl, supabaseKey)
+        
+        async function createUser() {
+            const resultDiv = document.getElementById('result')
+            resultDiv.innerHTML = '<div class="info">Creating user...</div>'
+            
+            try {
+                const { data, error } = await supabase.auth.signUp({
+                    email: 'girishiyerr@gmail.com',
+                    password: 'Yofreak@19',
+                })
+                
+                if (error) {
+                    console.error('Error:', error)
+                    resultDiv.innerHTML = `<div class="error"><strong>Error:</strong> ${error.message}</div>`
+                    return
+                }
+                
+                if (data.user) {
+                    if (data.user.email_confirmed_at) {
+                        resultDiv.innerHTML = `
+                            <div class="success">
+                                <strong>✅ Success!</strong><br>
+                                Admin user created successfully!<br>
+                                User ID: ${data.user.id}<br>
+                                Email: ${data.user.email}<br>
+                                <strong>You can now login to the admin dashboard.</strong>
+                            </div>
+                        `
+                    } else {
+                        resultDiv.innerHTML = `
+                            <div class="info">
+                                <strong>⚠️ User created but needs email confirmation</strong><br>
+                                Check your email (girishiyerr@gmail.com) for a confirmation link.<br>
+                                After confirming, you can login to the admin dashboard.
+                            </div>
+                        `
+                    }
+                }
+            } catch (err) {
+                console.error('Error:', err)
+                resultDiv.innerHTML = `<div class="error"><strong>Error:</strong> ${err.message}</div>`
+            }
+        }
+    </script>
+</body>
+</html>

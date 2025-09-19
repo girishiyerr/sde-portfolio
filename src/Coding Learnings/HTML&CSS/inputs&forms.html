@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inputs & Forms Attributes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .table-card {
+      background-color: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      max-width: 1000px;
+      width: 100%;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 14px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background-color: #007bff;
+      color: white;
+    }
+
+    code {
+      background-color: #eee;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 14px;
+      display: inline-block;
+      margin-top: 6px;
+    }
+
+    .example-input {
+      margin-bottom: 8px;
+      display: block;
+      padding: 8px;
+      font-size: 14px;
+      width: 100%;
+      max-width: 250px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    label {
+      font-weight: bold;
+      margin-top: 10px;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <div class="table-card">
+    <h2>Inputs & Forms Attributes</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Attribute</th>
+          <th>Why it matters</th>
+          <th>Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>type</code></td>
+          <td>Defines the behavior of the input, e.g. text, password, email, number, etc.</td>
+          <td>
+            <input type="email" placeholder="Enter your email" class="example-input" />
+            <code>&lt;input type="email" placeholder="Enter your email"&gt;</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>name</code></td>
+          <td>Used as the key when submitting form data. Identifies the input in the server.</td>
+          <td>
+            <input type="text" name="username" placeholder="Username" class="example-input" />
+            <code>&lt;input type="text" name="username" placeholder="Username"&gt;</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>placeholder</code></td>
+          <td>Displays hint text inside the input box before the user types.</td>
+          <td>
+            <input type="text" placeholder="Search here..." class="example-input" />
+            <code>&lt;input type="text" placeholder="Search here..."&gt;</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>value</code></td>
+          <td>Pre-fills the input with a preset value.</td>
+          <td>
+            <input type="text" value="Girish" class="example-input" />
+            <code>&lt;input type="text" value="Girish"&gt;</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>required</code></td>
+          <td>Makes the field mandatory before form submission.</td>
+          <td>
+            <input type="text" placeholder="Required field" required class="example-input" />
+            <code>&lt;input type="text" placeholder="Required field" required&gt;</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>checked</code></td>
+          <td>Sets a radio button or checkbox to be selected by default.</td>
+          <td>
+            <label>
+              <input type="checkbox" checked /> Subscribe
+            </label>
+            <code>&lt;input type="checkbox" checked&gt; Subscribe</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>disabled</code></td>
+          <td>Makes the input uneditable and visually grayed out.</td>
+          <td>
+            <input type="text" value="Can't edit me" disabled class="example-input" />
+            <code>&lt;input type="text" value="Can't edit me" disabled&gt;</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>for</code></td>
+          <td>Connects a <code>&lt;label&gt;</code> to an input via the input’s <code>id</code>. Improves accessibility and usability.</td>
+          <td>
+            <label for="emailField">Email:</label>
+            <input type="email" id="emailField" placeholder="you@example.com" class="example-input" />
+            <code>&lt;label for="emailField"&gt;Email:&lt;/label&gt;<br>&lt;input type="email" id="emailField"&gt;</code>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

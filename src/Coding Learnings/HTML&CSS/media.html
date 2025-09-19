@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Media Attributes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .table-card {
+      background-color: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      max-width: 1000px;
+      width: 100%;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background-color: #007bff;
+      color: white;
+    }
+
+    code {
+      background-color: #eee;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 14px;
+      display: block;
+      margin-top: 8px;
+      white-space: pre-wrap;
+    }
+
+    video, audio {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin-bottom: 10px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="table-card">
+    <h2>Media Attributes</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Attribute</th>
+          <th>Why it matters</th>
+          <th>Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>controls</code></td>
+          <td>Displays play, pause, volume, and other controls for users to interact with audio/video.</td>
+          <td>
+            <video controls width="250">
+              <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+              Your browser does not support video.
+            </video>
+            <code>
+&lt;video controls width="250"&gt;<br>
+  &lt;source src="video.mp4" type="video/mp4"&gt;<br>
+&lt;/video&gt;
+            </code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>autoplay</code></td>
+          <td>Automatically starts media playback when the page loads. Often combined with muted to avoid user disruption.</td>
+          <td>
+            <video autoplay muted width="250">
+              <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+              Your browser does not support video.
+            </video>
+            <code>
+&lt;video autoplay muted width="250"&gt;<br>
+  &lt;source src="video.mp4" type="video/mp4"&gt;<br>
+&lt;/video&gt;
+            </code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>loop</code></td>
+          <td>Plays the media repeatedly in a loop until stopped by the user.</td>
+          <td>
+            <audio controls loop>
+              <source src="https://www.w3schools.com/html/horse.ogg" type="audio/ogg">
+              Your browser does not support audio.
+            </audio>
+            <code>
+&lt;audio controls loop&gt;<br>
+  &lt;source src="audio.ogg" type="audio/ogg"&gt;<br>
+&lt;/audio&gt;
+            </code>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

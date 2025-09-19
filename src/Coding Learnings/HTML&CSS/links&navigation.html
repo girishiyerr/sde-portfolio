@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Links & Navigation Attributes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .table-card {
+      background-color: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      max-width: 900px;
+      width: 100%;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 14px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background-color: #007bff;
+      color: white;
+    }
+
+    code {
+      background-color: #eee;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 14px;
+      display: inline-block;
+      margin-top: 6px;
+    }
+
+    .example-link {
+      display: block;
+      margin-bottom: 8px;
+      color: #007bff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .example-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="table-card">
+    <h2>Links & Navigation Attributes</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Attribute</th>
+          <th>Why it matters</th>
+          <th>Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>href</code></td>
+          <td>Specifies the URL where the link goes. Can be absolute (full URL) or relative (local file).</td>
+          <td>
+            <a href="https://www.example.com" class="example-link">Visit Example</a>
+            <code>&lt;a href="https://www.example.com"&gt;Visit Example&lt;/a&gt;</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>target</code></td>
+          <td>Determines how the link opens. E.g. <code>_blank</code> opens in a new tab.</td>
+          <td>
+            <a href="https://www.example.com" target="_blank" class="example-link">Open Example in New Tab</a>
+            <code>&lt;a href="https://www.example.com" target="_blank"&gt;Open Example&lt;/a&gt;</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>rel</code></td>
+          <td>Defines the relationship between this page and the linked page. E.g. <code>noopener noreferrer</code> improves security with <code>target="_blank"</code>.</td>
+          <td>
+            <a href="https://www.example.com" target="_blank" rel="noopener noreferrer" class="example-link">Secure Example Link</a>
+            <code>&lt;a href="https://www.example.com" target="_blank" rel="noopener noreferrer"&gt;Secure Example Link&lt;/a&gt;</code>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

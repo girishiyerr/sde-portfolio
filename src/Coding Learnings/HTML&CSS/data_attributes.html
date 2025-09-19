@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Attributes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .table-card {
+      background-color: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      max-width: 1000px;
+      width: 100%;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background-color: #007bff;
+      color: white;
+    }
+
+    code {
+      background-color: #eee;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 14px;
+      display: block;
+      margin-top: 8px;
+      white-space: pre-wrap;
+    }
+
+    .data-btn {
+      background-color: #28a745;
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .output {
+      margin-top: 10px;
+      font-weight: bold;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="table-card">
+    <h2>Data Attributes</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Attribute</th>
+          <th>Why it matters</th>
+          <th>Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>data-*</code></td>
+          <td>Lets you store custom data on HTML elements for JavaScript to read. Helps keep your HTML clean and separate from logic.</td>
+          <td>
+            <button class="data-btn" data-user-id="12345">Click me!</button>
+            <div class="output" id="dataOutput"></div>
+            <code>
+&lt;button data-user-id="12345"&gt;Click me!&lt;/button&gt;<br><br>
+// JavaScript:<br>
+const btn = document.querySelector('.data-btn');<br>
+btn.addEventListener('click', () => {<br>
+  const userId = btn.dataset.userId;<br>
+  console.log(userId);<br>
+});  
+            </code>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    const btn = document.querySelector('.data-btn');
+    const output = document.getElementById('dataOutput');
+
+    btn.addEventListener('click', () => {
+      const userId = btn.dataset.userId;
+      output.textContent = `User ID is: ${userId}`;
+    });
+  </script>
+</body>
+</html>

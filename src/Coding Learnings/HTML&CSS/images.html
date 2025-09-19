@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Image Attributes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .table-card {
+      background-color: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      max-width: 900px;
+      width: 100%;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 14px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background-color: #007bff;
+      color: white;
+    }
+
+    code {
+      background-color: #eee;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 14px;
+      display: inline-block;
+      margin-top: 6px;
+    }
+
+    .example-image {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 8px;
+      border-radius: 8px;
+      border: 2px solid #ddd;
+    }
+  </style>
+</head>
+<body>
+  <div class="table-card">
+    <h2>Image Attributes</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Attribute</th>
+          <th>Why it matters</th>
+          <th>Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>src</code></td>
+          <td>Specifies the image file path or URL to load the image.</td>
+          <td>
+            <img src="https://via.placeholder.com/150" alt="Placeholder Image" class="example-image" />
+            <code>&lt;img src="https://via.placeholder.com/150" alt="Placeholder Image"&gt;</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>alt</code></td>
+          <td>Provides alternative text for screen readers, improves accessibility, and helps SEO.</td>
+          <td>
+            <img src="https://via.placeholder.com/150" alt="A simple placeholder image" class="example-image" />
+            <code>&lt;img src="https://via.placeholder.com/150" alt="A simple placeholder image"&gt;</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>width / height</code></td>
+          <td>Controls the size of the displayed image. Can use pixels or percentages.</td>
+          <td>
+            <img src="https://via.placeholder.com/300" width="100" height="100" alt="Resized image" class="example-image" />
+            <code>&lt;img src="https://via.placeholder.com/300" width="100" height="100" alt="Resized image"&gt;</code>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

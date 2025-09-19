@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Universal HTML Attributes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .table-card {
+      background-color: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      max-width: 800px;
+      width: 100%;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 14px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background-color: #007bff;
+      color: white;
+    }
+
+    code {
+      background-color: #eee;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 14px;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <div class="table-card">
+    <h2>Universal HTML Attributes</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Attribute</th>
+          <th>Why it matters</th>
+          <th>Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>class</code></td>
+          <td>Used to apply CSS styles or target elements in JavaScript. Multiple elements can share the same class.</td>
+          <td><code>&lt;div class="box"&gt;...&lt;/div&gt;</code></td>
+        </tr>
+        <tr>
+          <td><code>id</code></td>
+          <td>Used for unique identification. Helps in JS manipulation or anchor navigation. Should be unique on the page.</td>
+          <td><code>&lt;div id="main-header"&gt;...&lt;/div&gt;</code></td>
+        </tr>
+        <tr>
+          <td><code>style</code></td>
+          <td>Applies inline CSS directly to the element. Not recommended for large styling, but good for quick tweaks.</td>
+          <td><code>&lt;p style="color: red;"&gt;Hello&lt;/p&gt;</code></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

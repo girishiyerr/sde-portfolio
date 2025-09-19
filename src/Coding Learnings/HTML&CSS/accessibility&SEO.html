@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Accessibility & SEO Attributes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .table-card {
+      background-color: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      max-width: 1000px;
+      width: 100%;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background-color: #007bff;
+      color: white;
+    }
+
+    code {
+      background-color: #eee;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 14px;
+      display: block;
+      margin-top: 8px;
+      white-space: pre-wrap;
+    }
+
+    .tooltip {
+      display: inline-block;
+      cursor: help;
+      color: #007bff;
+      border-bottom: 1px dotted #007bff;
+    }
+
+    img.example-img {
+      width: 150px;
+      border-radius: 8px;
+      margin-bottom: 8px;
+      border: 2px solid #ddd;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="table-card">
+    <h2>Accessibility & SEO Attributes</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Attribute</th>
+          <th>Why it matters</th>
+          <th>Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>aria-*</code></td>
+          <td>Used for screen readers to describe elements. Helps users with disabilities navigate the page.</td>
+          <td>
+            <button aria-label="Close this popup">❌</button>
+            <code>&lt;button aria-label="Close this popup"&gt;❌&lt;/button&gt;</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>title</code></td>
+          <td>Shows a small tooltip on hover. Can provide extra context or accessibility hints.</td>
+          <td>
+            <span title="This is a tooltip example" class="tooltip">Hover over me!</span>
+            <code>&lt;span title="This is a tooltip example"&gt;Hover over me!&lt;/span&gt;</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>lang</code></td>
+          <td>Sets the language of the document for screen readers and SEO. Helps search engines and browsers interpret the content correctly.</td>
+          <td>
+            <code>&lt;html lang="en"&gt;</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>alt</code></td>
+          <td>Alternative text for images. Helps visually impaired users and improves SEO if images don’t load.</td>
+          <td>
+            <img src="https://via.placeholder.com/150" alt="Placeholder example image" class="example-img" />
+            <code>&lt;img src="https://via.placeholder.com/150" alt="Placeholder example image"&gt;</code>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
+

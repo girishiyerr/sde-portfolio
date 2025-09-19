@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Display Examples</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .table-card {
+      background-color: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      max-width: 1000px;
+      width: 100%;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background-color: #007bff;
+      color: white;
+    }
+
+    code {
+      background-color: #eee;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 14px;
+      display: block;
+      margin-top: 8px;
+      white-space: pre-wrap;
+    }
+
+    .example-box {
+      border: 2px solid #007bff;
+      background-color: #e6f0ff;
+      padding: 10px;
+      margin: 5px;
+      display: inline-block;
+      min-width: 80px;
+      text-align: center;
+      border-radius: 5px;
+    }
+
+    .flex-container {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="table-card">
+    <h2>CSS Display Property</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Property</th>
+          <th>Explanation</th>
+          <th>Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>display: block</code></td>
+          <td>
+            Takes up the full width available. Starts on a new line. Stacks vertically.
+          </td>
+          <td>
+            <div class="example-box" style="display: block;">Box 1</div>
+            <div class="example-box" style="display: block;">Box 2</div>
+            <code>
+.example-box {<br>
+  display: block;<br>
+}
+            </code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>display: inline</code></td>
+          <td>
+            Does not start on a new line. Takes up only as much width as needed. Good for small elements like links or spans.
+          </td>
+          <td>
+            <span class="example-box" style="display: inline;">Box 1</span>
+            <span class="example-box" style="display: inline;">Box 2</span>
+            <code>
+.example-box {<br>
+  display: inline;<br>
+}
+            </code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>display: flex</code></td>
+          <td>
+            Creates a flexible container. Children can align horizontally or vertically, and space can be distributed easily.
+          </td>
+          <td>
+            <div class="flex-container">
+              <div class="example-box">Box 1</div>
+              <div class="example-box">Box 2</div>
+              <div class="example-box">Box 3</div>
+            </div>
+            <code>
+.flex-container {<br>
+  display: flex;<br>
+  gap: 10px;<br>
+}
+            </code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>display: grid</code></td>
+          <td>
+            Creates a grid system of rows and columns. Perfect for complex layouts.
+          </td>
+          <td>
+            <div class="grid-container">
+              <div class="example-box">Box 1</div>
+              <div class="example-box">Box 2</div>
+              <div class="example -box">Box 3</div>
+              <div class="example-box">Box 4</div>
+              <div class="example-box">Box 5</div>
+              <div class="example-box">Box 6</div>
+            </div>
+            <code>
+.grid-container {<br>
+  display: grid;<br>
+  grid-template-columns: repeat(3, 1fr);<br>
+  gap: 10px;<br>
+}
+            </code>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

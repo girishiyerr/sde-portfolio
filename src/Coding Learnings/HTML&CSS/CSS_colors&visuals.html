@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Colors and Visuals</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .table-card {
+      background-color: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      max-width: 1200px;
+      width: 100%;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 40px;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background-color: #007bff;
+      color: white;
+    }
+
+    code {
+      background-color: #eee;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 14px;
+      display: block;
+      margin-top: 8px;
+      white-space: pre-wrap;
+    }
+
+    .visuals-example {
+      background-color: #007bff;
+      color: white;
+      background-image: linear-gradient(135deg, rgba(255,255,255,0.2) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0.2) 75%, transparent 75%, transparent);
+      background-size: 40px 40px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      opacity: 0.9;
+      padding: 30px;
+      border-radius: 10px;
+      margin: 30px auto;
+      text-align: center;
+      font-weight: bold;
+      max-width: 600px;
+    }
+
+    .content {
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+  <div class="table-card">
+    <h2>CSS Color & Visuals</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Property</th>
+          <th>Explanation</th>
+          <th>Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>color</code></td>
+          <td>Sets the color of text. Accepts names, hex, RGB, HSL etc.</td>
+          <td rowspan="5">
+            <div class="visuals-example">
+              This is a visuals example!
+            </div>
+            <code>
+.visuals-example {<br>
+  color: white;<br>
+  background-color: #007bff;<br>
+  background-image: linear-gradient(135deg, rgba(255,255,255,0.2) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0.2) 75%, transparent 75%, transparent);<br>
+  background-size: 40px 40px;<br>
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);<br>
+  opacity: 0.9;<br>
+}
+            </code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>background-color</code></td>
+          <td>Sets a solid background color for an element.</td>
+        </tr>
+        <tr>
+          <td><code>background-image</code></td>
+          <td>Places an image or gradient behind an element’s content.</td>
+        </tr>
+        <tr>
+          <td><code>box-shadow</code></td>
+          <td>Adds shadow around an element for depth. Format: <code>offset-x offset-y blur color</code>.</td>
+        </tr>
+        <tr>
+          <td><code>opacity</code></td>
+          <td>Makes elements semi-transparent (from 0 = invisible to 1 = solid).</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

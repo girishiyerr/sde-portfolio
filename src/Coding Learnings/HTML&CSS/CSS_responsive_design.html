@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Responsive Design (Fixed)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .table-card {
+      background-color: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      max-width: 1200px;
+      width: 100%;
+      overflow-x: auto;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    table {
+      width: 100%;
+      table-layout: fixed;
+      border-collapse: collapse;
+      margin-bottom: 40px;
+      word-break: break-word;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background-color: #007bff;
+      color: white;
+    }
+
+    code {
+      background-color: #eee;
+      padding: 8px;
+      border-radius: 4px;
+      font-size: 14px;
+      display: block;
+      margin-top: 8px;
+      white-space: pre;
+      overflow-x: auto;
+    }
+
+    .example-wrapper {
+      max-width: 100%;
+      overflow-x: auto;
+    }
+
+    .responsive-example {
+      background-color: #007bff;
+      color: white;
+      padding: 20px;
+      border-radius: 8px;
+      margin: 30px 0;
+      text-align: center;
+      font-weight: bold;
+      width: 100%;
+      max-width: 600px;
+      font-size: 24px;
+      transition: background-color 0.3s;
+    }
+
+    @media (max-width: 600px) {
+      .responsive-example {
+        background-color: #28a745;
+        font-size: 18px;
+      }
+    }
+
+    .content {
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+  <div class="table-card">
+    <h2>CSS Responsive Design</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Property</th>
+          <th>Explanation</th>
+          <th>Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>@media queries</code></td>
+          <td>
+            Rules that apply styles only under certain screen conditions (width, height, orientation, etc.).  
+            E.g. <code>@media (max-width: 600px) { ... }</code>
+          </td>
+          <td rowspan="2">
+            <div class="example-wrapper">
+              <div class="responsive-example">
+                Resize your browser!
+              </div>
+              <code>
+.responsive-example {<br>
+  background-color: #007bff;<br>
+  font-size: 24px;<br>
+}<br><br>
+@media (max-width: 600px) {<br>
+  .responsive-example {<br>
+    background-color: #28a745;<br>
+    font-size: 18px;<br>
+  }<br>
+}
+              </code>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td><code>max-width / min-width</code></td>
+          <td>
+            Limits how wide or narrow an element or layout can grow.  
+            E.g. <code>max-width: 600px;</code> keeps boxes readable on big screens.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="content">
+      <p>This text sits <strong>after</strong> the responsive example. Layout stays perfect, no overlap.</p>
+    </div>
+  </div>
+</body>
+</html>

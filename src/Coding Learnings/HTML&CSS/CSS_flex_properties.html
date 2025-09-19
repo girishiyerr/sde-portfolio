@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Flex Properties</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .table-card {
+      background-color: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      max-width: 1200px;
+      width: 100%;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 40px;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background-color: #007bff;
+      color: white;
+    }
+
+    code {
+      background-color: #eee;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 14px;
+      display: block;
+      margin-top: 8px;
+      white-space: pre-wrap;
+    }
+
+    .flex-container {
+      display: flex;
+      border: 2px dashed #007bff;
+      padding: 10px;
+      margin-bottom: 30px;
+      background-color: #f0f8ff;
+      border-radius: 8px;
+      flex-wrap: wrap;
+      min-height: 150px;
+      box-sizing: border-box;
+    }
+
+    .flex-item {
+      background-color: rgba(0,123,255,0.7);
+      color: white;
+      padding: 10px 16px;
+      border-radius: 5px;
+      margin: 5px;
+      width: 100px;
+      text-align: center;
+      box-sizing: border-box;
+    }
+
+    .content {
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+  <div class="table-card">
+    <h2>CSS Flex Properties</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Property</th>
+          <th>Explanation</th>
+          <th>Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>justify-content</code></td>
+          <td>Controls horizontal alignment of items along the main axis.</td>
+          <td>
+            <div class="flex-container" style="justify-content: center;">
+              <div class="flex-item">Box 1</div>
+              <div class="flex-item">Box 2</div>
+              <div class="flex-item">Box 3</div>
+            </div>
+            <code>
+.flex-container {<br>
+  display: flex;<br>
+  justify-content: center;<br>
+}
+            </code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>align-items</code></td>
+          <td>Controls vertical alignment of items along the cross axis.</td>
+          <td>
+            <div class="flex-container" style="align-items: flex-end; height: 150px;">
+              <div class="flex-item" style="height: 50px;">Box 1</div>
+              <div class="flex-item" style="height: 100px;">Box 2</div>
+              <div class="flex-item" style="height: 70px;">Box 3</div>
+            </div>
+            <code>
+.flex-container {<br>
+  display: flex;<br>
+  align-items: flex-end;<br>
+}
+            </code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>flex-direction</code></td>
+          <td>Controls the direction of the main axis (row or column).</td>
+          <td>
+            <div class="flex-container" style="flex-direction: column;">
+              <div class="flex-item">Box 1</div>
+              <div class="flex-item">Box 2</div>
+              <div class="flex-item">Box 3</div>
+            </div>
+            <code>
+.flex-container {<br>
+  display: flex;<br>
+  flex-direction: column;<br>
+}
+            </code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>flex-wrap</code></td>
+          <td>Allows items to wrap onto multiple lines if needed.</td>
+          <td>
+            <div class="flex-container" style="flex-wrap: wrap; width: 250px;">
+              <div class="flex-item">Box 1</div>
+              <div class="flex-item">Box 2</div>
+              <div class="flex-item">Box 3</div>
+              <div class="flex-item">Box 4</div>
+              <div class="flex-item">Box 5</div>
+            </div>
+            <code>
+.flex-container {<br>
+  display: flex;<br>
+  flex-wrap: wrap;<br>
+}
+            </code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>align-content</code></td>
+          <td>Aligns rows of flex items when there’s extra space on the cross axis. Useful with multi-line flex containers.</td>
+          <td>
+            <div class="flex-container" style="flex-wrap: wrap; align-content: space-between; height: 200px;">
+              <div class="flex-item">Box 1</div>
+              <div class="flex-item">Box 2</div>
+              <div class="flex-item">Box 3</div>
+              <div class="flex-item">Box 4</div>
+              <div class="flex-item">Box 5</div>
+              <div class="flex-item">Box 6</div>
+            </div>
+            <code>
+.flex-container {<br>
+  display: flex;<br>
+  flex-wrap: wrap;<br>
+  align-content: space-between;<br>
+}
+            </code>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

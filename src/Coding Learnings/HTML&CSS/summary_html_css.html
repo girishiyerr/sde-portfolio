@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTML & CSS Summary</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 40px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 40px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 20px;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: #007bff;
+    }
+
+    .card p {
+      color: #555;
+    }
+
+    .card a {
+      display: inline-block;
+      margin-top: 10px;
+      text-decoration: none;
+      color: white;
+      background-color: #007bff;
+      padding: 8px 12px;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+
+    .card a:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <h1>HTML & CSS Summary</h1>
+  <div class="grid">
+
+    <div class="card">
+      <h3>Boilerplate</h3>
+      <p>Basic HTML structure for every page.</p>
+      <a href="boilerplate.html" target="_blank">View Example</a>
+    </div>
+
+    <div class="card">
+      <h3>Universal Attributes</h3>
+      <p>class, id, style — essential for every dev.</p>
+      <a href="class_id_style.html" target="_blank">View Example</a>
+    </div>
+
+    <div class="card">
+      <h3>Links & Navigation</h3>
+      <p>href, target, rel with practical demos.</p>
+      <a href="links&navigation.html" target="_blank">View Example</a>
+    </div>
+
+    <div class="card">
+      <h3>Images</h3>
+      <p>src, alt, width and height for media handling.</p>
+      <a href="images.html" target="_blank">View Example</a>
+    </div>
+
+    <div class="card">
+      <h3>Inputs & Forms</h3>
+      <p>type, name, placeholder, required, etc.</p>
+      <a href="inputs&forms.html" target="_blank">View Example</a>
+    </div>
+
+    <div class="card">
+      <h3>Tables</h3>
+      <p>colspan, rowspan for table layouts.</p>
+      <a href="tables.html" target="_blank">View Example</a>
+    </div>
+
+    <div class="card">
+      <h3>Media</h3>
+      <p>audio/video with controls, autoplay, loop.</p>
+      <a href="media.html" target="_blank">View Example</a>
+    </div>
+
+    <div class="card">
+      <h3>Accessibility & SEO</h3>
+      <p>aria attributes, lang, title, alt for better UX.</p>
+      <a href="accessibility&SEO.html" target="_blank">View Example</a>
+    </div>
+
+    <div class="card">
+      <h3>Data Attributes</h3>
+      <p>Custom data-* attributes for JS interactivity.</p>
+      <a href="data_attributes.html" target="_blank">View Example</a>
+    </div>
+
+    <div class="card">
+      <h3>Display & Layout</h3>
+      <p>block, inline, flex, grid for modern layouts.</p>
+      <a href="CSS_layout&display.html" target="_blank">View Example</a>
+    </div>
+
+    <div class="card">
+      <h3>Positioning</h3>
+      <p>relative, absolute, fixed, sticky for layout control.</p>
+      <a href="CSS_position_property.html" target="_blank">View Example</a>
+    </div>
+
+    <div class="card">
+      <h3>Flexbox</h3>
+      <p>flex properties like justify-content, align-items, etc.</p>
+      <a href="CSS_flex_properties.html" target="_blank">View Example</a>
+    </div>
+
+    <div class="card">
+      <h3>Grid</h3>
+      <p>grid-template-columns, gap for layouts.</p>
+      <a href="CSS_grid_template_columns.html" target="_blank">View Example</a>
+    </div>
+
+    <div class="card">
+      <h3>Box Model</h3>
+      <p>margin, padding, border, box-sizing explained.</p>
+      <a href="CSS_box_model.html" target="_blank">View Example</a>
+    </div>
+
+    <div class="card">
+      <h3>Typography</h3>
+      <p>font-family, size, weight, line-height for text styling.</p>
+      <a href="CSS_typography.html" target="_blank">View Example</a>
+    </div>
+
+    <div class="card">
+      <h3>Colors & Visuals</h3>
+      <p>color, background, shadows, opacity for UI beauty.</p>
+      <a href="CSS_colors&visuals.html" target="_blank">View Example</a>
+    </div>
+
+    <div class="card">
+      <h3>Transitions & Animation</h3>
+      <p>transition, transform, animation for interactivity.</p>
+      <a href="CSS_transitions&animation.html" target="_blank">View Example</a>
+    </div>
+
+    <div class="card">
+      <h3>Responsive Design</h3>
+      <p>@media queries, max-width for mobile-friendly design.</p>
+      <a href="CSS_responsive_design.html" target="_blank">View Example</a>
+    </div>
+
+    <div class="card">
+      <h3>Miscellaneous</h3>
+      <p>overflow, cursor, z-index for fine control.</p>
+      <a href="CSS_miscellaneous.html" target="_blank">View Example</a>
+    </div>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Miscellaneous Properties</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .table-card {
+      background-color: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      max-width: 1200px;
+      width: 100%;
+      overflow-x: auto;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 40px;
+      table-layout: fixed;
+      word-break: break-word;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background-color: #007bff;
+      color: white;
+    }
+
+    code {
+      background-color: #eee;
+      padding: 8px;
+      border-radius: 4px;
+      font-size: 14px;
+      display: block;
+      margin-top: 8px;
+      white-space: pre;
+      overflow-x: auto;
+    }
+
+    .misc-example-wrapper {
+      max-width: 100%;
+      overflow-x: auto;
+    }
+
+    .overflow-box {
+      background-color: #007bff;
+      color: white;
+      width: 300px;
+      height: 100px;
+      overflow: scroll;
+      padding: 10px;
+      border-radius: 8px;
+      margin: 20px auto;
+    }
+
+    .cursor-box {
+      background-color: #28a745;
+      color: white;
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+      cursor: pointer;
+      width: max-content;
+      margin: 20px auto;
+    }
+
+    .zindex-container {
+      position: relative;
+      height: 150px;
+      margin: 30px auto;
+      max-width: 300px;
+    }
+
+    .zindex-box1 {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      width: 120px;
+      height: 120px;
+      background-color: rgba(255,0,0,0.6);
+      z-index: 1;
+      border-radius: 8px;
+    }
+
+    .zindex-box2 {
+      position: absolute;
+      top: 40px;
+      left: 60px;
+      width: 120px;
+      height: 120px;
+      background-color: rgba(0,0,255,0.6);
+      z-index: 2;
+      border-radius: 8px;
+    }
+
+    .content {
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+  <div class="table-card">
+    <h2>CSS Miscellaneous Properties</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Property</th>
+          <th>Explanation</th>
+          <th>Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>overflow</code></td>
+          <td>
+            Controls what happens when content is too big for its container.  
+            Options: <code>visible</code>, <code>hidden</code>, <code>scroll</code>, <code>auto</code>.
+          </td>
+          <td rowspan="3">
+            <div class="misc-example-wrapper">
+              <div class="overflow-box">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tincidunt, ligula ut luctus facilisis, est arcu finibus erat, ut convallis orci mauris a nunc.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tincidunt, ligula ut luctus facilisis, est arcu finibus erat, ut convallis orci mauris a nunc.
+
+              </div>
+              <div class="cursor-box">
+                Hover me! (cursor: pointer)
+              </div>
+              <div class="zindex-container">
+                <div class="zindex-box1"></div>
+                <div class="zindex-box2"></div>
+              </div>
+              <code>
+.overflow-box {<br>
+  overflow: scroll;<br>
+}<br><br>
+.cursor-box {<br>
+  cursor: pointer;<br>
+}<br><br>
+.zindex-box1 {<br>
+  z-index: 1;<br>
+}<br>
+.zindex-box2 {<br>
+  z-index: 2;<br>
+}
+              </code>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td><code>cursor</code></td>
+          <td>
+            Changes the mouse cursor when hovering over elements.  
+            E.g. <code>cursor: pointer;</code> makes it look clickable.
+          </td>
+        </tr>
+        <tr>
+          <td><code>z-index</code></td>
+          <td>
+            Controls which elements appear on top of others.  
+            Higher numbers appear above lower numbers.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="content">
+      <p>This text sits <strong>after</strong> the miscellaneous examples. Layout stays perfect.</p>
+    </div>
+  </div>
+</body>
+</html>

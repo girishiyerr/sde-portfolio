@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Transitions & Animations</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .table-card {
+      background-color: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      max-width: 1200px;
+      width: 100%;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 40px;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background-color: #007bff;
+      color: white;
+    }
+
+    code {
+      background-color: #eee;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 14px;
+      display: block;
+      margin-top: 8px;
+      white-space: pre-wrap;
+    }
+
+    .animate-example {
+      background-color: #007bff;
+      color: white;
+      padding: 20px 40px;
+      border-radius: 8px;
+      margin: 30px auto;
+      text-align: center;
+      font-weight: bold;
+      width: max-content;
+      cursor: pointer;
+      transition: all 0.5s ease;
+      animation: pulse 2s infinite;
+    }
+
+    .animate-example:hover {
+      background-color: #28a745;
+      transform: scale(1.2) rotate(5deg);
+    }
+
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(0,123,255, 0.7);
+      }
+      70% {
+        box-shadow: 0 0 20px 10px rgba(0,123,255, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(0,123,255, 0);
+      }
+    }
+
+    .content {
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+  <div class="table-card">
+    <h2>CSS Transitions & Animations</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Property</th>
+          <th>Explanation</th>
+          <th>Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>transition</code></td>
+          <td>
+            Smoothly animates property changes like color, size, position.  
+            E.g. <code>transition: all 0.5s ease;</code>
+          </td>
+          <td rowspan="3">
+            <div class="animate-example">
+              Hover me!
+            </div>
+            <code>
+.animate-example {<br>
+  transition: all 0.5s ease;<br>
+  animation: pulse 2s infinite;<br>
+}<br><br>
+.animate-example:hover {<br>
+  background-color: #28a745;<br>
+  transform: scale(1.2) rotate(5deg);<br>
+}
+            </code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>transform</code></td>
+          <td>
+            Changes shape, size, or position of an element.  
+            E.g. <code>transform: scale(1.2) rotate(5deg);</code>
+          </td>
+        </tr>
+        <tr>
+          <td><code>animation</code></td>
+          <td>
+            Runs keyframe animations to create complex effects.  
+            E.g. pulsing shadows or moving elements.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
