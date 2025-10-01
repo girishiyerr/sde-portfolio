@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { TrendingUp, Users, DollarSign, Clock, Target, CheckCircle, ArrowRight, Star, Zap, BarChart3 } from 'lucide-react'
+import { TrendingUp, Users, DollarSign, Clock, Target, CheckCircle, ArrowRight, Star, Zap, BarChart3, Code } from 'lucide-react'
 
 const Skills = () => {
   const [ref, inView] = useInView({
@@ -14,207 +14,207 @@ const Skills = () => {
 
   const skills = [
     {
-      id: 'ai-automation',
-      name: 'AI Automation',
-      icon: Zap,
-      color: 'from-purple-500 to-pink-500',
-      description: 'Implementing intelligent automation solutions for business processes',
-      level: 'Expert',
-      businessValue: [
-        {
-          metric: '60%',
-          label: 'Reduction in Manual Work',
-          description: 'Automate repetitive tasks and free up your team for strategic work'
-        },
-        {
-          metric: '24/7',
-          label: 'Continuous Operation',
-          description: 'AI systems work around the clock without breaks or errors'
-        },
-        {
-          metric: '$50K+',
-          label: 'Annual Cost Savings',
-          description: 'Typical savings from implementing AI automation solutions'
-        }
-      ],
-      useCases: [
-        {
-          title: 'Customer Service Automation',
-          description: 'AI chatbots handle 80% of customer inquiries automatically',
-          benefits: ['Reduced response time', 'Improved customer satisfaction', 'Lower support costs'],
-          industry: 'All Industries'
-        },
-        {
-          title: 'Document Processing',
-          description: 'Automatically extract and process information from documents',
-          benefits: ['Faster processing', 'Reduced errors', 'Better compliance'],
-          industry: 'Finance, Legal, Healthcare'
-        },
-        {
-          title: 'Email & Communication Management',
-          description: 'Smart email routing, prioritization, and auto-responses',
-          benefits: ['Improved efficiency', 'Better organization', 'Faster responses'],
-          industry: 'All Industries'
-        }
-      ],
-      successStory: {
-        client: 'E-commerce Company',
-        challenge: 'Overwhelmed with customer service requests',
-        solution: 'Implemented AI chatbot with 95% accuracy',
-        results: ['85% reduction in response time', '60% cost savings', '90% customer satisfaction']
-      }
-    },
-    {
-      id: 'ai-websites',
-      name: 'AI-Powered Websites',
-      icon: TrendingUp,
+      id: 'customer-success',
+      name: 'Customer Success',
+      icon: Users,
       color: 'from-blue-500 to-cyan-500',
-      description: 'Building intelligent websites with AI features and automation',
+      description: 'Delivering exceptional customer support and building strong relationships',
       level: 'Expert',
       businessValue: [
         {
-          metric: '40%',
-          label: 'Increase in Conversions',
-          description: 'AI personalization and optimization boost website performance'
+          metric: '95%+',
+          label: 'Resolution Rate',
+          description: 'Consistently high customer issue resolution success rate'
         },
         {
-          metric: '3x',
-          label: 'Faster Development',
-          description: 'AI-powered tools accelerate website creation and deployment'
+          metric: '20%',
+          label: 'Time Reduction',
+          description: 'Reduced average handling time through process improvements'
         },
         {
-          metric: '90%',
-          label: 'User Engagement',
-          description: 'Intelligent features keep visitors engaged and coming back'
+          metric: '15%',
+          label: 'Satisfaction Increase',
+          description: 'Improved customer satisfaction scores through strategic approach'
         }
       ],
       useCases: [
         {
-          title: 'Smart Content Management',
-          description: 'AI generates and optimizes website content automatically',
-          benefits: ['Fresh content daily', 'SEO optimization', 'Reduced content costs'],
-          industry: 'Marketing, E-commerce, Media'
+          title: 'Complex Account Management',
+          description: 'Managing 50+ complex account inquiries daily with high success rate',
+          benefits: ['High resolution rate', 'Customer retention', 'Brand loyalty'],
+          industry: 'E-commerce, SaaS, Technology'
         },
         {
-          title: 'Personalized User Experience',
-          description: 'Dynamic content and layouts based on user behavior',
-          benefits: ['Higher engagement', 'Better conversion rates', 'Improved user satisfaction'],
-          industry: 'E-commerce, SaaS, Education'
-        },
-        {
-          title: 'Intelligent Search & Navigation',
-          description: 'AI-powered search with natural language understanding',
-          benefits: ['Better user experience', 'Faster content discovery', 'Reduced bounce rates'],
+          title: 'Strategic Advisory',
+          description: 'Providing guidance to high-potential brands for growth',
+          benefits: ['Increased satisfaction', 'Better outcomes', 'Long-term partnerships'],
           industry: 'All Industries'
+        },
+        {
+          title: 'Cross-functional Collaboration',
+          description: 'Working with payments, catalog, and technical teams',
+          benefits: ['Faster resolution', 'Better solutions', 'Improved processes'],
+          industry: 'Technology, E-commerce'
         }
       ],
       successStory: {
-        client: 'Online Education Platform',
-        challenge: 'Low course completion rates and poor user engagement',
-        solution: 'Built AI-powered personalized learning paths',
-        results: ['55% increase in course completion', '40% boost in user engagement', '30% higher revenue']
+        client: 'Amazon Global Sellers',
+        challenge: 'Complex marketplace issues requiring technical expertise',
+        solution: 'Implemented standardized response templates and process improvements',
+        results: ['20% reduction in handling time', '15% increase in satisfaction', 'Top 10% performance ranking']
       }
     },
     {
-      id: 'data-analysis',
-      name: 'AI Data Analysis',
-      icon: BarChart3,
+      id: 'web-development',
+      name: 'Web Development',
+      icon: Code,
       color: 'from-green-500 to-emerald-500',
-      description: 'Extracting insights and patterns from business data using AI',
-      level: 'Advanced',
+      description: 'Building responsive web applications with modern technologies',
+      level: 'Intermediate',
       businessValue: [
         {
-          metric: '85%',
-          label: 'Faster Insights',
-          description: 'AI analyzes data in minutes instead of days'
-        },
-        {
-          metric: '95%',
-          label: 'Prediction Accuracy',
-          description: 'Advanced ML models provide highly accurate forecasts'
+          metric: '25%',
+          label: 'User Engagement',
+          description: 'Improved user engagement through better interfaces'
         },
         {
           metric: '30%',
-          label: 'Better Decisions',
-          description: 'Data-driven insights improve business outcomes'
+          label: 'Performance Boost',
+          description: 'Reduced page load times through optimization'
+        },
+        {
+          metric: '15+',
+          label: 'Reusable Components',
+          description: 'Built reusable components for development efficiency'
         }
       ],
       useCases: [
         {
-          title: 'Sales Forecasting',
-          description: 'Predict future sales trends and optimize inventory',
-          benefits: ['Reduced stockouts', 'Better cash flow', 'Optimized pricing'],
-          industry: 'Retail, Manufacturing, E-commerce'
+          title: 'Modern Web Applications',
+          description: 'Building responsive web apps using HTML5, CSS3, and JavaScript',
+          benefits: ['Modern UI/UX', 'Better performance', 'Maintainable code'],
+          industry: 'All Industries'
         },
         {
-          title: 'Customer Analytics',
-          description: 'Understand customer behavior and predict churn',
-          benefits: ['Higher retention', 'Better targeting', 'Increased lifetime value'],
-          industry: 'SaaS, E-commerce, Subscription Services'
+          title: 'API Integration',
+          description: 'Integrating RESTful APIs with backend systems for seamless data flow',
+          benefits: ['Real-time data', 'Better functionality', 'Scalable architecture'],
+          industry: 'Technology, E-commerce, SaaS'
         },
         {
-          title: 'Risk Assessment',
-          description: 'AI-powered risk analysis for financial decisions',
-          benefits: ['Reduced losses', 'Better compliance', 'Faster processing'],
-          industry: 'Finance, Insurance, Banking'
+          title: 'Performance Optimization',
+          description: 'Optimizing front-end performance and user experience',
+          benefits: ['Faster loading', 'Better SEO', 'Higher conversions'],
+          industry: 'All Industries'
         }
       ],
       successStory: {
-        client: 'Retail Chain',
-        challenge: 'High inventory costs and frequent stockouts',
-        solution: 'Implemented AI demand forecasting system',
-        results: ['45% reduction in inventory costs', '60% fewer stockouts', '25% increase in profit margins']
+        client: 'Daynil Solutions',
+        challenge: 'Need for responsive web applications with modern standards',
+        solution: 'Developed web applications with optimized performance',
+        results: ['25% increase in user engagement', '30% reduction in load times', '15+ reusable components built']
       }
     },
     {
-      id: 'ai-tools',
-      name: 'AI Tools & Platforms',
-      icon: Target,
+      id: 'process-optimization',
+      name: 'Process Optimization',
+      icon: BarChart3,
       color: 'from-orange-500 to-red-500',
-      description: 'Expertise in leading AI platforms and development tools',
+      description: 'Improving operational efficiency through process analysis and optimization',
       level: 'Expert',
       businessValue: [
         {
-          metric: '50+',
-          label: 'AI Tools Mastered',
-          description: 'Deep expertise across all major AI platforms'
+          metric: '20%',
+          label: 'Time Reduction',
+          description: 'Reduced average handling time through process improvements'
         },
         {
-          metric: '90%',
-          label: 'Implementation Success',
-          description: 'High success rate in AI tool deployments'
+          metric: '15%',
+          label: 'Cost Savings',
+          description: 'Reduced invoice processing times and operational costs'
         },
         {
-          metric: '2x',
-          label: 'Faster Integration',
-          description: 'Rapid deployment using proven methodologies'
+          metric: '25%',
+          label: 'Error Reduction',
+          description: 'Implemented quality control measures reducing errors'
         }
       ],
       useCases: [
         {
-          title: 'OpenAI & GPT Integration',
-          description: 'Seamless integration of advanced language models',
-          benefits: ['Natural conversations', 'Content generation', 'Task automation'],
-          industry: 'All Industries'
+          title: 'Customer Service Optimization',
+          description: 'Streamlined customer issue resolution processes',
+          benefits: ['Faster resolution', 'Better customer satisfaction', 'Reduced costs'],
+          industry: 'E-commerce, SaaS, Technology'
         },
         {
-          title: 'Cloud AI Services',
-          description: 'Leverage AWS, Azure, and Google Cloud AI capabilities',
-          benefits: ['Scalable solutions', 'Enterprise security', 'Cost optimization'],
-          industry: 'Enterprise, SaaS, Large Businesses'
+          title: 'Billing Process Improvement',
+          description: 'Optimized billing processes and quality control',
+          benefits: ['Faster processing', 'Reduced errors', 'Better accuracy'],
+          industry: 'Finance, E-commerce, Services'
         },
         {
-          title: 'Custom AI Development',
-          description: 'Build tailored AI solutions using modern frameworks',
-          benefits: ['Perfect fit', 'Competitive advantage', 'Future-proof'],
+          title: 'Team Training & Development',
+          description: 'Implemented training programs for team efficiency',
+          benefits: ['Better performance', 'Reduced errors', 'Higher satisfaction'],
           industry: 'All Industries'
         }
       ],
       successStory: {
-        client: 'Healthcare Startup',
-        challenge: 'Needed AI-powered patient monitoring system',
-        solution: 'Built custom solution using multiple AI platforms',
-        results: ['99% accuracy in monitoring', '40% reduction in readmissions', '50% cost savings']
+        client: 'Amazon & Reckon Concern',
+        challenge: 'Need for improved operational efficiency and reduced processing times',
+        solution: 'Implemented process improvements and quality control measures',
+        results: ['20% reduction in handling time', '15% reduction in processing times', '25% reduction in errors']
+      }
+    },
+    {
+      id: 'ai-learning',
+      name: 'AI Learning & Development',
+      icon: Target,
+      color: 'from-purple-500 to-pink-500',
+      description: 'Continuous learning and exploration of AI technologies and applications',
+      level: 'Intermediate',
+      businessValue: [
+        {
+          metric: 'Ongoing',
+          label: 'Learning Journey',
+          description: 'Continuously exploring AI technologies and applications'
+        },
+        {
+          metric: 'Practical',
+          label: 'Application Focus',
+          description: 'Focusing on practical business applications of AI'
+        },
+        {
+          metric: 'Future-Ready',
+          label: 'Skill Development',
+          description: 'Building skills for future AI implementation opportunities'
+        }
+      ],
+      useCases: [
+        {
+          title: 'AI in Customer Success',
+          description: 'Exploring AI applications in customer service and support',
+          benefits: ['Better automation', 'Improved efficiency', 'Enhanced experience'],
+          industry: 'Customer Service, E-commerce, SaaS'
+        },
+        {
+          title: 'Business Process Automation',
+          description: 'Learning AI tools for automating business processes',
+          benefits: ['Reduced manual work', 'Better accuracy', 'Cost savings'],
+          industry: 'All Industries'
+        },
+        {
+          title: 'Data Analysis & Insights',
+          description: 'Using AI for better data analysis and business insights',
+          benefits: ['Faster analysis', 'Better predictions', 'Data-driven decisions'],
+          industry: 'All Industries'
+        }
+      ],
+      successStory: {
+        client: 'Personal Development',
+        challenge: 'Need to stay current with AI technologies and applications',
+        solution: 'Self-directed learning and exploration of AI tools and platforms',
+        results: ['Enhanced technical knowledge', 'Better understanding of AI applications', 'Prepared for future opportunities']
       }
     }
   ]
@@ -230,11 +230,11 @@ const Skills = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            AI <span className="gradient-text">Expertise</span>
+            Professional <span className="gradient-text">Skills</span>
           </h2>
           <p className="text-lg text-dark-600 dark:text-dark-400 max-w-3xl mx-auto">
-            Explore my AI consulting capabilities with real-world business value. Click on any skill to see 
-            measurable results, use cases, and success stories.
+            Explore my professional capabilities with real-world business value. Click on any skill to see 
+            measurable results, use cases, and success stories from my experience.
           </p>
         </motion.div>
 
@@ -470,13 +470,14 @@ const Skills = () => {
           className="text-center"
         >
           <h3 className="text-2xl font-bold mb-8 text-dark-800 dark:text-dark-200">
-            AI <span className="gradient-text">Tools & Platforms</span>
+            Technical <span className="gradient-text">Skills & Tools</span>
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
             {[
-              'OpenAI GPT-4', 'Claude AI', 'Google AI', 'Azure AI', 'AWS AI', 'Hugging Face',
-              'LangChain', 'Pinecone', 'Weaviate', 'Chroma', 'TensorFlow', 'PyTorch',
-              'Zapier', 'Make.com', 'Bubble', 'Webflow', 'Airtable', 'Notion AI'
+              'Customer Success', 'Process Optimization', 'Team Leadership', 'Data Analysis',
+              'HTML5', 'CSS3', 'JavaScript', 'Git', 'RESTful APIs', 'Microsoft Office',
+              'Cross-functional Collaboration', 'Quality Control', 'AI Learning', 'Automation',
+              'Business Intelligence', 'Problem Solving', 'Communication', 'Project Management'
             ].map((tech, index) => (
               <motion.div
                 key={tech}

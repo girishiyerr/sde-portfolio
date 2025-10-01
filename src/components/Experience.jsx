@@ -12,62 +12,80 @@ const Experience = () => {
   const experiences = [
     {
       type: 'Professional',
-      title: 'AI Business Consultant',
-      company: 'Freelance',
+      title: 'Customer Success Specialist',
+      company: 'Amazon Development Centre India',
       location: 'Mumbai, India',
-      period: 'Jan 2022 - Present',
-      description: 'Helping small and medium businesses in India leverage AI tools for automation, customer service, and digital transformation. Specializing in practical AI implementations that deliver real business value.',
-      technologies: ['OpenAI GPT-4', 'Python', 'React', 'Node.js', 'Automation Tools', 'Zapier'],
+      period: 'Feb 2021 - Present',
+      description: 'Deliver dedicated support to Amazon\'s global sellers, managing 50+ complex account inquiries daily with 95%+ resolution rate. Serve as strategic advisor to high-potential brands and collaborate cross-functionally with payments, catalog, and technical teams.',
+      technologies: ['Customer Success', 'Process Optimization', 'Stakeholder Management', 'Data Analysis', 'Cross-functional Collaboration'],
       link: '#',
       achievements: [
-        'Helped 15+ Indian businesses implement AI solutions',
-        'Generated $500K+ in cost savings for clients',
-        'Built 20+ AI-powered websites and chatbots'
+        'Consistently rank in top 10% for operational metrics',
+        'Reduced average handling time by 20% through process improvements',
+        'Increased seller satisfaction scores by 15%',
+        'Trained and mentored 10+ team members with 95% success rate'
       ]
     },
     {
       type: 'Professional',
-      title: 'Software Developer',
-      company: 'Tech Solutions Pvt Ltd',
+      title: 'React Developer',
+      company: 'Daynil Solutions',
       location: 'Mumbai, India',
-      period: 'Jun 2020 - Dec 2021',
-      description: 'Developed web applications and automation solutions for local businesses. Gained experience in full-stack development and started exploring AI integration opportunities.',
-      technologies: ['React', 'Node.js', 'Python', 'MongoDB', 'AWS', 'JavaScript'],
+      period: 'Jun 2020 - Sep 2020',
+      description: 'Developed responsive web applications using React.js, HTML5, CSS3, and JavaScript following modern web standards. Collaborated with UX/UI designers to implement user-friendly interfaces.',
+      technologies: ['React.js', 'HTML5', 'CSS3', 'JavaScript', 'Git', 'RESTful APIs'],
       link: '#',
       achievements: [
-        'Built 10+ web applications for local businesses',
-        'Implemented automation solutions reducing manual work by 60%',
-        'Learned AI/ML fundamentals through online courses'
+        'Built 15+ reusable React components',
+        'Improved user engagement by 25%',
+        'Reduced page load times by 30% through optimization',
+        'Integrated RESTful APIs with backend systems'
+      ]
+    },
+    {
+      type: 'Professional',
+      title: 'Team Leader & Billing Executive',
+      company: 'Reckon Concern',
+      location: 'Mumbai, India',
+      period: 'Jan 2016 - Apr 2016',
+      description: 'Streamlined billing processes and led a team of 5 billing executives. Resolved customer billing inquiries and implemented quality control measures.',
+      technologies: ['Team Leadership', 'Process Improvement', 'Customer Service', 'Quality Control'],
+      link: '#',
+      achievements: [
+        'Reduced invoice processing times by 15%',
+        'Maintained 98% customer satisfaction rate',
+        'Reduced billing errors by 25%',
+        'Provided training and mentorship to team members'
       ]
     },
     {
       type: 'Education',
-      title: 'Bachelor of Technology in Computer Science',
-      company: 'Mumbai University',
+      title: 'Bachelor of Science in Computer Science',
+      company: 'K. V. Pendharkar College',
       location: 'Mumbai, India',
-      period: 'Aug 2016 - May 2020',
-      description: 'Graduated with focus on software engineering and computer science fundamentals. Developed strong programming skills and interest in emerging technologies.',
-      technologies: ['Java', 'Python', 'C++', 'Data Structures', 'Algorithms', 'Database Systems'],
+      period: 'Jul 2017 - Oct 2020',
+      description: 'Graduated with focus on computer science fundamentals, programming, and software development. Developed strong technical skills and problem-solving abilities.',
+      technologies: ['Computer Science', 'Programming', 'Data Structures', 'Algorithms', 'Software Development'],
       link: '#',
       achievements: [
-        'CGPA: 8.2/10',
-        'Completed multiple AI/ML online certifications',
-        'Active in coding competitions and hackathons'
+        'Strong foundation in computer science principles',
+        'Developed programming and problem-solving skills',
+        'Gained knowledge in software development methodologies'
       ]
     },
     {
       type: 'Personal',
-      title: 'AI Learning & Community',
-      company: 'Online Communities',
-      location: 'Global',
+      title: 'AI Learning & Development',
+      company: 'Self-Directed Learning',
+      location: 'Online',
       period: '2021 - Present',
-      description: 'Continuously learning about AI tools and technologies through online courses, communities, and hands-on projects. Sharing knowledge with other developers and entrepreneurs.',
-      technologies: ['AI Tools', 'Machine Learning', 'Business Strategy', 'Online Learning'],
+      description: 'Continuously learning about AI technologies, tools, and implementation strategies. Exploring practical applications of AI in business processes and customer success.',
+      technologies: ['AI Tools', 'Machine Learning', 'Automation', 'Business Intelligence'],
       link: '#',
       achievements: [
-        'Completed 20+ AI/ML online courses',
-        'Built personal AI projects and demos',
-        'Helped 10+ developers learn AI implementation'
+        'Exploring AI implementation in customer success',
+        'Learning AI-powered automation tools',
+        'Studying practical business applications of AI'
       ]
     }
   ]
@@ -109,10 +127,10 @@ const Experience = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            My AI <span className="gradient-text">Journey</span>
+            My Professional <span className="gradient-text">Journey</span>
           </h2>
           <p className="text-lg text-dark-600 dark:text-dark-400 max-w-3xl mx-auto">
-            A timeline of my AI consulting experience, education, and achievements that demonstrate my expertise in transforming businesses with artificial intelligence.
+            A timeline of my professional experience, technical expertise, and achievements that demonstrate my commitment to delivering exceptional results and continuous learning.
           </p>
         </motion.div>
 
@@ -233,7 +251,7 @@ const Experience = () => {
             onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
             className="inline-block px-8 py-3 bg-gradient-to-r from-primary-500 to-secondary-500 text-white rounded-lg font-semibold hover:from-primary-600 hover:to-secondary-600 transition-all duration-300 shadow-lg hover:shadow-xl"
           >
-            Start Your AI Transformation
+            Let's Work Together
           </motion.button>
         </motion.div>
       </div>

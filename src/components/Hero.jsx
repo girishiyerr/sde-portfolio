@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ChevronDown, Download, Mail, Github, Linkedin } from 'lucide-react'
+import { ChevronDown, Download, Mail } from 'lucide-react'
 import profileImg from '../assets/profile.jpg'
 
 const Hero = () => {
   const [currentTextIndex, setCurrentTextIndex] = useState(0)
   const texts = [
-    "AI Business Consultant", 
-    "Automation Specialist",
-    "AI-Powered Solutions Expert",
+    "Customer Success Specialist", 
+    "Process Optimization Expert",
+    "AI Enthusiast",
   ]
 
   useEffect(() => {
@@ -133,9 +133,9 @@ const Hero = () => {
               transition={{ duration: 0.8, delay: 0.8 }}
               className="text-lg text-dark-600 dark:text-dark-400 mb-8 max-w-2xl"
             >
-              I help businesses leverage AI tools to automate processes, build intelligent websites, 
-              and create custom solutions that drive growth and efficiency. From chatbots to data analysis, 
-              I transform your business challenges into AI-powered opportunities.
+              Results-driven professional with 4+ years of experience in customer success, process optimization, 
+              and stakeholder management. I specialize in delivering exceptional customer outcomes, improving operational 
+              efficiency, and exploring innovative solutions including AI applications for business growth.
             </motion.p>
 
             {/* CTA Buttons */}
@@ -152,47 +152,20 @@ const Hero = () => {
                 onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 <Mail size={20} />
-                Start Your AI Journey
+                Get In Touch
               </motion.button>
               
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-3 border-2 border-primary-500 text-primary-500 dark:text-primary-400 rounded-lg font-semibold hover:bg-primary-500 hover:text-white transition-all duration-300 flex items-center gap-2"
-                onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 <Download size={20} />
-                View My Services
+                View My Work
               </motion.button>
             </motion.div>
 
-            {/* Social Links */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1.2 }}
-              className="flex items-center gap-4"
-            >
-              <span className="text-dark-600 dark:text-dark-400">Follow me:</span>
-              <motion.a
-                whileHover={{ scale: 1.2, y: -2 }}
-                href="https://github.com/yourusername"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 bg-white dark:bg-dark-800 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 text-dark-600 dark:text-dark-400 hover:text-primary-500 dark:hover:text-primary-400"
-              >
-                <Github size={24} />
-              </motion.a>
-              <motion.a
-                whileHover={{ scale: 1.2, y: -2 }}
-                href="https://linkedin.com/in/yourusername"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 bg-white dark:bg-dark-800 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 text-dark-600 dark:text-dark-400 hover:text-primary-500 dark:hover:text-primary-400"
-              >
-                <Linkedin size={24} />
-              </motion.a>
-            </motion.div>
           </motion.div>
 
           {/* Right Content - Profile Image */}

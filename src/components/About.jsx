@@ -10,19 +10,19 @@ const About = () => {
   })
 
   const stats = [
-    { label: 'Businesses Helped', value: '15+' },
-    { label: 'Years AI Experience', value: '2+' },
-    { label: 'AI Tools Mastered', value: '20+' },
-    { label: 'Projects Completed', value: '25+' },
+    { label: 'Years Experience', value: '4+' },
+    { label: 'Customer Issues Resolved', value: '50+' },
+    { label: 'Process Improvements', value: '20%' },
+    { label: 'Team Members Mentored', value: '10+' },
   ]
 
   const interests = [
-    { icon: Code, title: 'AI Development', description: 'Building intelligent solutions' },
-    { icon: Coffee, title: 'Business Strategy', description: 'Crafting AI implementation plans' },
-    { icon: Book, title: 'Learning', description: 'Staying ahead of AI trends' },
-    { icon: Music, title: 'Innovation', description: 'Creative problem-solving approaches' },
-    { icon: Camera, title: 'Data Analysis', description: 'Extracting insights from data' },
-    { icon: Gamepad2, title: 'Automation', description: 'Streamlining business processes' },
+    { icon: Code, title: 'Web Development', description: 'Building modern applications' },
+    { icon: Coffee, title: 'Customer Success', description: 'Delivering exceptional support' },
+    { icon: Book, title: 'Continuous Learning', description: 'Exploring new technologies' },
+    { icon: Music, title: 'Process Optimization', description: 'Improving operational efficiency' },
+    { icon: Camera, title: 'Data Analysis', description: 'Extracting business insights' },
+    { icon: Gamepad2, title: 'Gaming', description: 'Strategic thinking & problem solving' },
   ]
 
   return (
@@ -39,7 +39,7 @@ const About = () => {
             About <span className="gradient-text">Me</span>
           </h2>
           <p className="text-lg text-dark-600 dark:text-dark-400 max-w-3xl mx-auto">
-            Discover how I help businesses unlock their potential through strategic AI implementation and automation solutions.
+            Learn about my journey in customer success, web development, and AI implementation that drives business growth and operational excellence.
           </p>
         </motion.div>
 
@@ -55,18 +55,19 @@ const About = () => {
             </h3>
             <div className="space-y-4 text-dark-600 dark:text-dark-400">
               <p>
-                I'm a freelance AI consultant based in Mumbai, India, specializing in helping small and medium businesses 
-                leverage artificial intelligence to solve real-world problems and drive growth. My expertise spans from 
-                building intelligent websites to implementing practical automation solutions that save time and money.
+                I'm a results-driven professional with 4+ years of experience in customer success and process optimization. 
+                Currently working as a Customer Success Specialist at Amazon Development Centre India, where I deliver 
+                dedicated support to global sellers and consistently rank in the top 10% for operational metrics.
               </p>
               <p>
-                With over 2 years of experience in AI implementation, I've helped 15+ Indian businesses transform their 
-                operations through strategic AI adoption. From local startups to established companies, I tailor 
-                AI solutions that deliver measurable results and competitive advantages.
+                My expertise spans customer success, process improvement, and team leadership. I've successfully 
+                reduced customer issue handling time by 20% through process improvements and have mentored 10+ team members 
+                with a 95% successful onboarding rate. I'm also exploring how emerging technologies like AI can enhance 
+                customer experiences and operational efficiency.
               </p>
               <p>
-                My approach combines technical knowledge with business understanding, ensuring that every AI solution 
-                I implement directly contributes to your bottom line and operational efficiency.
+                I hold a Bachelor of Science in Computer Science and have hands-on experience in building web applications, 
+                implementing automation solutions, and continuously learning about new technologies that can drive business growth.
               </p>
             </div>
           </motion.div>
@@ -101,7 +102,7 @@ const About = () => {
           className="text-center mb-12"
         >
           <h3 className="text-2xl font-bold mb-8 text-dark-800 dark:text-dark-200">
-            Beyond <span className="gradient-text">AI Implementation</span>
+            Beyond <span className="gradient-text">Professional Work</span>
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {interests.map((interest, index) => (
@@ -145,9 +146,9 @@ const About = () => {
               <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mx-auto mb-4">
                 <Code size={24} />
               </div>
-              <h4 className="text-lg font-semibold mb-2">AI-Powered Websites</h4>
+              <h4 className="text-lg font-semibold mb-2">Customer Success</h4>
               <p className="text-primary-100 text-sm">
-                Building intelligent websites with chatbots, personalized content, and automated customer interactions.
+                Delivering exceptional support with 95%+ resolution rates and top 10% performance metrics.
               </p>
             </motion.div>
 
@@ -158,9 +159,9 @@ const About = () => {
               <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mx-auto mb-4">
                 <Code size={24} />
               </div>
-              <h4 className="text-lg font-semibold mb-2">Business Automation</h4>
+              <h4 className="text-lg font-semibold mb-2">Process Optimization</h4>
               <p className="text-secondary-100 text-sm">
-                Streamlining operations with AI-driven workflows, data processing, and intelligent decision-making systems.
+                Implementing process improvements that reduce handling time by 20% and improve efficiency.
               </p>
             </motion.div>
 
@@ -171,9 +172,9 @@ const About = () => {
               <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mx-auto mb-4">
                 <Code size={24} />
               </div>
-              <h4 className="text-lg font-semibold mb-2">AI Strategy Consulting</h4>
+              <h4 className="text-lg font-semibold mb-2">Team Leadership</h4>
               <p className="text-primary-100 text-sm">
-                Developing comprehensive AI roadmaps and implementation strategies tailored to your business goals.
+                Mentoring and training team members with 95% successful onboarding and performance improvement.
               </p>
             </motion.div>
           </div>

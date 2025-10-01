@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter } from 'lucide-react'
+import { Mail, Phone, MapPin, Send } from 'lucide-react'
 import { supabase } from '../lib/supabase'
 
 const Contact = () => {
@@ -113,26 +113,6 @@ Please try again later or contact me directly at: girishiyerr@gmail.com`)
     }
   ]
 
-  const socialLinks = [
-    {
-      icon: Github,
-      name: 'GitHub',
-      url: 'https://github.com/yourusername',
-      color: 'hover:from-gray-700 to-gray-900'
-    },
-    {
-      icon: Linkedin,
-      name: 'LinkedIn',
-      url: 'https://linkedin.com/in/yourusername',
-      color: 'hover:from-blue-600 to-blue-700'
-    },
-    {
-      icon: Twitter,
-      name: 'Twitter',
-      url: 'https://twitter.com/yourusername',
-      color: 'hover:from-blue-400 to-blue-500'
-    }
-  ]
 
   return (
     <section id="contact" className="py-20 bg-gradient-to-br from-primary-50 to-secondary-50 dark:from-dark-900 dark:to-dark-800">
@@ -190,29 +170,6 @@ Please try again later or contact me directly at: girishiyerr@gmail.com`)
               ))}
             </div>
 
-            {/* Social Links */}
-            <div>
-              <h4 className="text-lg font-semibold text-dark-800 dark:text-dark-200 mb-4">
-                Follow Me
-              </h4>
-              <div className="flex gap-4">
-                {socialLinks.map((social, index) => (
-                  <motion.a
-                    key={social.name}
-                    href={social.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={inView ? { opacity: 1, scale: 1 } : {}}
-                    transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
-                    whileHover={{ scale: 1.1, y: -2 }}
-                    className={`w-12 h-12 bg-gradient-to-r from-gray-600 to-gray-700 ${social.color} rounded-lg flex items-center justify-center transition-all duration-300 shadow-md hover:shadow-lg`}
-                  >
-                    <social.icon size={24} className="text-white" />
-                  </motion.a>
-                ))}
-              </div>
-            </div>
           </motion.div>
 
           {/* Contact Form */}
