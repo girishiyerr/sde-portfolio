@@ -227,18 +227,18 @@ const Skills = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-12 lg:mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
             Professional <span className="gradient-text">Skills</span>
           </h2>
-          <p className="text-lg text-dark-600 dark:text-dark-400 max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg text-dark-600 dark:text-dark-400 max-w-3xl mx-auto px-4">
             Explore my professional capabilities with real-world business value. Click on any skill to see 
             measurable results, use cases, and success stories from my experience.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-12 lg:mb-16">
           {skills.map((skill, index) => (
             <motion.div
               key={skill.id}
@@ -249,21 +249,21 @@ const Skills = () => {
               onClick={() => setSelectedSkill(skill)}
               className="skill-box bg-white dark:bg-dark-700 cursor-pointer group"
             >
-              <div className="p-6">
-                <div className={`w-16 h-16 bg-gradient-to-r ${skill.color} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                  <skill.icon size={32} className="text-white" />
+              <div className="p-4 sm:p-6">
+                <div className={`w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r ${skill.color} rounded-xl flex items-center justify-center mb-3 sm:mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                  <skill.icon size={24} className="text-white sm:w-8 sm:h-8" />
                 </div>
-                <h3 className="text-xl font-bold text-dark-800 dark:text-dark-200 mb-2">
+                <h3 className="text-lg sm:text-xl font-bold text-dark-800 dark:text-dark-200 mb-2">
                   {skill.name}
                 </h3>
-                <p className="text-dark-600 dark:text-dark-400 text-sm mb-4">
+                <p className="text-dark-600 dark:text-dark-400 text-xs sm:text-sm mb-3 sm:mb-4">
                   {skill.description}
                 </p>
                 <div className="flex items-center justify-between">
-                  <span className="px-3 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 rounded-full text-xs font-medium">
+                  <span className="px-2 sm:px-3 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 rounded-full text-xs font-medium">
                     {skill.level}
                   </span>
-                  <span className="text-primary-500 group-hover:text-primary-600 transition-colors duration-200">
+                  <span className="text-primary-500 group-hover:text-primary-600 transition-colors duration-200 text-xs sm:text-sm">
                     Click to explore →
                   </span>
                 </div>
@@ -278,7 +278,7 @@ const Skills = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+              className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-2 sm:p-4"
               onClick={() => setSelectedSkill(null)}
             >
               <motion.div
@@ -286,19 +286,19 @@ const Skills = () => {
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0.8, opacity: 0 }}
                 onClick={(e) => e.stopPropagation()}
-                className="bg-white dark:bg-dark-700 rounded-xl shadow-2xl max-w-6xl w-full max-h-[90vh] overflow-y-auto"
+                className="bg-white dark:bg-dark-700 rounded-xl shadow-2xl max-w-6xl w-full max-h-[95vh] sm:max-h-[90vh] overflow-y-auto"
               >
-                <div className="p-6">
-                  <div className="flex justify-between items-start mb-6">
-                    <div className="flex items-center gap-4">
-                      <div className={`w-16 h-16 bg-gradient-to-r ${selectedSkill.color} rounded-xl flex items-center justify-center`}>
-                        <selectedSkill.icon size={32} className="text-white" />
+                <div className="p-4 sm:p-6">
+                  <div className="flex flex-col sm:flex-row sm:items-start gap-4 mb-6">
+                    <div className="flex items-center gap-3 sm:gap-4">
+                      <div className={`w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r ${selectedSkill.color} rounded-xl flex items-center justify-center`}>
+                        <selectedSkill.icon size={24} className="text-white sm:w-8 sm:h-8" />
                       </div>
                       <div>
-                        <h2 className="text-2xl font-bold text-dark-800 dark:text-dark-200">
+                        <h2 className="text-xl sm:text-2xl font-bold text-dark-800 dark:text-dark-200">
                           {selectedSkill.name}
                         </h2>
-                        <p className="text-dark-600 dark:text-dark-400">
+                        <p className="text-sm sm:text-base text-dark-600 dark:text-dark-400">
                           {selectedSkill.description}
                         </p>
                       </div>
@@ -307,32 +307,32 @@ const Skills = () => {
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.9 }}
                       onClick={() => setSelectedSkill(null)}
-                      className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
+                      className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 self-start sm:self-auto"
                     >
-                      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                       </svg>
                     </motion.button>
                   </div>
 
                   {/* Business Value Metrics */}
-                  <div className="mb-8">
-                    <h3 className="text-lg font-semibold text-dark-800 dark:text-dark-200 mb-4">
+                  <div className="mb-6 sm:mb-8">
+                    <h3 className="text-base sm:text-lg font-semibold text-dark-800 dark:text-dark-200 mb-3 sm:mb-4">
                       💼 Business Impact
                     </h3>
-                    <div className="grid md:grid-cols-3 gap-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
                       {selectedSkill.businessValue.map((value, index) => (
                         <motion.div
                           key={index}
                           initial={{ opacity: 0, y: 20 }}
                           animate={{ opacity: 1, y: 0 }}
                           transition={{ duration: 0.3, delay: index * 0.1 }}
-                          className="bg-gradient-to-br from-primary-50 to-secondary-50 dark:from-primary-900/20 dark:to-secondary-900/20 rounded-lg p-4 border border-primary-100 dark:border-primary-800"
+                          className="bg-gradient-to-br from-primary-50 to-secondary-50 dark:from-primary-900/20 dark:to-secondary-900/20 rounded-lg p-3 sm:p-4 border border-primary-100 dark:border-primary-800"
                         >
-                          <div className="text-2xl font-bold text-primary-600 dark:text-primary-400 mb-1">
+                          <div className="text-xl sm:text-2xl font-bold text-primary-600 dark:text-primary-400 mb-1">
                             {value.metric}
                           </div>
-                          <div className="text-sm font-medium text-dark-700 dark:text-dark-300 mb-2">
+                          <div className="text-xs sm:text-sm font-medium text-dark-700 dark:text-dark-300 mb-1 sm:mb-2">
                             {value.label}
                           </div>
                           <div className="text-xs text-dark-600 dark:text-dark-400">
@@ -343,30 +343,30 @@ const Skills = () => {
                     </div>
                   </div>
 
-                  <div className="grid lg:grid-cols-2 gap-8">
+                  <div className="grid lg:grid-cols-2 gap-6 sm:gap-8">
                     {/* Use Cases */}
                     <div>
-                      <h3 className="text-lg font-semibold text-dark-800 dark:text-dark-200 mb-4">
+                      <h3 className="text-base sm:text-lg font-semibold text-dark-800 dark:text-dark-200 mb-3 sm:mb-4">
                         🎯 Real-World Use Cases
                       </h3>
-                      <div className="space-y-4">
+                      <div className="space-y-3 sm:space-y-4">
                         {selectedSkill.useCases.map((useCase, index) => (
                           <motion.div
                             key={index}
                             initial={{ opacity: 0, x: -20 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.3, delay: index * 0.1 }}
-                            className="bg-white dark:bg-dark-600 rounded-lg p-4 border border-gray-100 dark:border-gray-600 hover:border-primary-300 dark:hover:border-primary-600 transition-colors duration-200"
+                            className="bg-white dark:bg-dark-600 rounded-lg p-3 sm:p-4 border border-gray-100 dark:border-gray-600 hover:border-primary-300 dark:hover:border-primary-600 transition-colors duration-200"
                           >
-                            <div className="flex items-start justify-between mb-2">
-                              <h4 className="font-semibold text-dark-800 dark:text-dark-200">
+                            <div className="flex flex-col sm:flex-row sm:items-start justify-between mb-2 gap-2">
+                              <h4 className="text-sm sm:text-base font-semibold text-dark-800 dark:text-dark-200">
                                 {useCase.title}
                               </h4>
-                              <span className="px-2 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 rounded-full text-xs font-medium">
+                              <span className="px-2 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 rounded-full text-xs font-medium self-start">
                                 {useCase.industry}
                               </span>
                             </div>
-                            <p className="text-sm text-dark-600 dark:text-dark-400 mb-3">
+                            <p className="text-xs sm:text-sm text-dark-600 dark:text-dark-400 mb-2 sm:mb-3">
                               {useCase.description}
                             </p>
                             <div className="flex flex-wrap gap-1">
@@ -383,55 +383,55 @@ const Skills = () => {
 
                     {/* Success Story */}
                     <div>
-                      <h3 className="text-lg font-semibold text-dark-800 dark:text-dark-200 mb-4">
+                      <h3 className="text-base sm:text-lg font-semibold text-dark-800 dark:text-dark-200 mb-3 sm:mb-4">
                         🏆 Client Success Story
                       </h3>
                       <motion.div
                         initial={{ opacity: 0, x: 20 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.3, delay: 0.2 }}
-                        className="bg-gradient-to-br from-secondary-50 to-primary-50 dark:from-secondary-900/20 dark:to-primary-900/20 rounded-lg p-6 border border-secondary-100 dark:border-secondary-800"
+                        className="bg-gradient-to-br from-secondary-50 to-primary-50 dark:from-secondary-900/20 dark:to-primary-900/20 rounded-lg p-4 sm:p-6 border border-secondary-100 dark:border-secondary-800"
                       >
-                        <div className="mb-4">
+                        <div className="mb-3 sm:mb-4">
                           <div className="flex items-center gap-2 mb-2">
-                            <Users size={20} className="text-secondary-600 dark:text-secondary-400" />
-                            <span className="font-semibold text-dark-800 dark:text-dark-200">
+                            <Users size={16} className="text-secondary-600 dark:text-secondary-400 sm:w-5 sm:h-5" />
+                            <span className="text-sm sm:text-base font-semibold text-dark-800 dark:text-dark-200">
                               {selectedSkill.successStory.client}
                             </span>
                           </div>
                         </div>
                         
-                        <div className="space-y-3">
+                        <div className="space-y-2 sm:space-y-3">
                           <div>
                             <div className="flex items-center gap-2 mb-1">
-                              <Target size={16} className="text-orange-500" />
-                              <span className="text-sm font-medium text-dark-700 dark:text-dark-300">Challenge</span>
+                              <Target size={14} className="text-orange-500 sm:w-4 sm:h-4" />
+                              <span className="text-xs sm:text-sm font-medium text-dark-700 dark:text-dark-300">Challenge</span>
                             </div>
-                            <p className="text-sm text-dark-600 dark:text-dark-400">
+                            <p className="text-xs sm:text-sm text-dark-600 dark:text-dark-400">
                               {selectedSkill.successStory.challenge}
                             </p>
                           </div>
                           
                           <div>
                             <div className="flex items-center gap-2 mb-1">
-                              <CheckCircle size={16} className="text-blue-500" />
-                              <span className="text-sm font-medium text-dark-700 dark:text-dark-300">Solution</span>
+                              <CheckCircle size={14} className="text-blue-500 sm:w-4 sm:h-4" />
+                              <span className="text-xs sm:text-sm font-medium text-dark-700 dark:text-dark-300">Solution</span>
                             </div>
-                            <p className="text-sm text-dark-600 dark:text-dark-400">
+                            <p className="text-xs sm:text-sm text-dark-600 dark:text-dark-400">
                               {selectedSkill.successStory.solution}
                             </p>
                           </div>
                           
                           <div>
                             <div className="flex items-center gap-2 mb-2">
-                              <TrendingUp size={16} className="text-green-500" />
-                              <span className="text-sm font-medium text-dark-700 dark:text-dark-300">Results</span>
+                              <TrendingUp size={14} className="text-green-500 sm:w-4 sm:h-4" />
+                              <span className="text-xs sm:text-sm font-medium text-dark-700 dark:text-dark-300">Results</span>
                             </div>
                             <div className="space-y-1">
                               {selectedSkill.successStory.results.map((result, idx) => (
                                 <div key={idx} className="flex items-center gap-2">
-                                  <ArrowRight size={12} className="text-green-500" />
-                                  <span className="text-sm text-dark-600 dark:text-dark-400">{result}</span>
+                                  <ArrowRight size={10} className="text-green-500 sm:w-3 sm:h-3" />
+                                  <span className="text-xs sm:text-sm text-dark-600 dark:text-dark-400">{result}</span>
                                 </div>
                               ))}
                             </div>
@@ -439,8 +439,8 @@ const Skills = () => {
                         </div>
                       </motion.div>
 
-                      <div className="mt-6 p-4 bg-gradient-to-r from-primary-50 to-secondary-50 dark:from-primary-900/20 dark:to-secondary-900/20 rounded-lg">
-                        <h4 className="text-sm font-semibold text-dark-700 dark:text-dark-300 mb-2">
+                      <div className="mt-4 sm:mt-6 p-3 sm:p-4 bg-gradient-to-r from-primary-50 to-secondary-50 dark:from-primary-900/20 dark:to-secondary-900/20 rounded-lg">
+                        <h4 className="text-xs sm:text-sm font-semibold text-dark-700 dark:text-dark-300 mb-2">
                           Proficiency Level
                         </h4>
                         <div className="flex items-center gap-2">
@@ -450,7 +450,7 @@ const Skills = () => {
                               style={{ width: selectedSkill.level === 'Expert' ? '95%' : selectedSkill.level === 'Advanced' ? '85%' : '70%' }}
                             ></div>
                           </div>
-                          <span className="text-sm font-medium text-dark-600 dark:text-dark-400">
+                          <span className="text-xs sm:text-sm font-medium text-dark-600 dark:text-dark-400">
                             {selectedSkill.level}
                           </span>
                         </div>
@@ -469,10 +469,10 @@ const Skills = () => {
           transition={{ duration: 0.8, delay: 1 }}
           className="text-center"
         >
-          <h3 className="text-2xl font-bold mb-8 text-dark-800 dark:text-dark-200">
+          <h3 className="text-xl sm:text-2xl font-bold mb-6 lg:mb-8 text-dark-800 dark:text-dark-200">
             Technical <span className="gradient-text">Skills & Tools</span>
           </h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4">
             {[
               'Customer Success', 'Process Optimization', 'Team Leadership', 'Data Analysis',
               'HTML5', 'CSS3', 'JavaScript', 'Git', 'RESTful APIs', 'Microsoft Office',
@@ -485,9 +485,9 @@ const Skills = () => {
                 animate={inView ? { opacity: 1, scale: 1 } : {}}
                 transition={{ duration: 0.5, delay: 1.2 + index * 0.05 }}
                 whileHover={{ scale: 1.05 }}
-                className="p-3 bg-white dark:bg-dark-700 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100 dark:border-gray-600"
+                className="p-2 sm:p-3 bg-white dark:bg-dark-700 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100 dark:border-gray-600"
               >
-                <span className="text-sm font-medium text-dark-700 dark:text-dark-300">
+                <span className="text-xs sm:text-sm font-medium text-dark-700 dark:text-dark-300">
                   {tech}
                 </span>
               </motion.div>

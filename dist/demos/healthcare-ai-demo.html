@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare AI Demo - MediCare Plus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header h1 {
+            color: #2d3748;
+            margin-bottom: 10px;
+            font-size: 2.5rem;
+        }
+        
+        .header p {
+            color: #718096;
+            font-size: 1.2rem;
+        }
+        
+        .demo-section {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .demo-section h2 {
+            color: #2d3748;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+        
+        .appointment-demo {
+            background: #f7fafc;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .appointment-form {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .form-group label {
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #2d3748;
+        }
+        
+        .form-group input, .form-group select {
+            padding: 12px;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+        
+        .ai-suggestions {
+            background: #e6fffa;
+            border: 1px solid #81e6d9;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .ai-suggestions h4 {
+            color: #234e52;
+            margin-bottom: 10px;
+        }
+        
+        .suggestion-item {
+            background: white;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            border-left: 3px solid #38b2ac;
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .stat-card {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .stat-card h3 {
+            font-size: 2rem;
+            margin-bottom: 5px;
+        }
+        
+        .stat-card p {
+            opacity: 0.9;
+        }
+        
+        .automation-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .feature-card {
+            background: #f7fafc;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #4facfe;
+        }
+        
+        .feature-card h3 {
+            color: #2d3748;
+            margin-bottom: 10px;
+        }
+        
+        .feature-card p {
+            color: #718096;
+        }
+        
+        .patient-portal {
+            background: #f0fff4;
+            border: 1px solid #9ae6b4;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .portal-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        .portal-item:last-child {
+            border-bottom: none;
+        }
+        
+        .status {
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        
+        .status.confirmed {
+            background: #c6f6d5;
+            color: #22543d;
+        }
+        
+        .status.pending {
+            background: #fef5e7;
+            color: #744210;
+        }
+        
+        .demo-note {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0;
+            color: #856404;
+        }
+        
+        .btn {
+            background: #4facfe;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+        
+        .btn:hover {
+            background: #3182ce;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏥 MediCare Plus - AI-Powered Healthcare</h1>
+            <p>Experience seamless healthcare with AI-driven appointment scheduling, automated patient management, and intelligent medical assistance</p>
+        </div>
+        
+        <div class="demo-section">
+            <h2>📅 AI-Powered Appointment Scheduling</h2>
+            <div class="appointment-demo">
+                <div class="appointment-form">
+                    <div class="form-group">
+                        <label>Patient Name</label>
+                        <input type="text" value="Rajesh Kumar" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label>Preferred Date</label>
+                        <input type="date" value="2024-01-15">
+                    </div>
+                    <div class="form-group">
+                        <label>Preferred Time</label>
+                        <select>
+                            <option>Morning (9 AM - 12 PM)</option>
+                            <option>Afternoon (12 PM - 5 PM)</option>
+                            <option>Evening (5 PM - 8 PM)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Doctor Specialization</label>
+                        <select>
+                            <option>General Medicine</option>
+                            <option>Cardiology</option>
+                            <option>Dermatology</option>
+                            <option>Pediatrics</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="ai-suggestions">
+                    <h4>🤖 AI Recommendations</h4>
+                    <div class="suggestion-item">
+                        <strong>Best Match:</strong> Dr. Priya Sharma (General Medicine) - Jan 15, 10:30 AM
+                        <br><small>✅ Available • ⭐ 4.9/5 rating • 🚗 15 min from your location</small>
+                    </div>
+                    <div class="suggestion-item">
+                        <strong>Alternative:</strong> Dr. Amit Patel (General Medicine) - Jan 15, 2:00 PM
+                        <br><small>✅ Available • ⭐ 4.8/5 rating • 🚗 20 min from your location</small>
+                    </div>
+                </div>
+                
+                <button class="btn" onclick="bookAppointment()">Book Appointment</button>
+            </div>
+        </div>
+        
+        <div class="demo-section">
+            <h2>👤 Patient Portal Dashboard</h2>
+            <div class="patient-portal">
+                <div class="portal-item">
+                    <div>
+                        <strong>Upcoming Appointment</strong>
+                        <br><small>Dr. Priya Sharma - Jan 15, 10:30 AM</small>
+                    </div>
+                    <span class="status confirmed">Confirmed</span>
+                </div>
+                <div class="portal-item">
+                    <div>
+                        <strong>Insurance Verification</strong>
+                        <br><small>Policy: HDFC Health - Valid until Dec 2024</small>
+                    </div>
+                    <span class="status confirmed">Verified</span>
+                </div>
+                <div class="portal-item">
+                    <div>
+                        <strong>Prescription Refill</strong>
+                        <br><small>Blood Pressure Medication - 2 refills remaining</small>
+                    </div>
+                    <span class="status pending">Pending</span>
+                </div>
+                <div class="portal-item">
+                    <div>
+                        <strong>Lab Results</strong>
+                        <br><small>Blood Test - Jan 10, 2024</small>
+                    </div>
+                    <span class="status confirmed">Available</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="demo-section">
+            <h2>📊 AI Automation Results</h2>
+            <div class="stats">
+                <div class="stat-card">
+                    <h3>20</h3>
+                    <p>Hours Saved Per Week</p>
+                </div>
+                <div class="stat-card">
+                    <h3>95%</h3>
+                    <p>Patient Satisfaction</p>
+                </div>
+                <div class="stat-card">
+                    <h3>70%</h3>
+                    <p>Reduction in No-Shows</p>
+                </div>
+                <div class="stat-card">
+                    <h3>100%</h3>
+                    <p>Insurance Verification Accuracy</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="demo-section">
+            <h2>🚀 AI Features Implemented</h2>
+            <div class="automation-features">
+                <div class="feature-card">
+                    <h3>📅 Smart Scheduling</h3>
+                    <p>AI analyzes doctor availability, patient preferences, and historical data to suggest optimal appointment times</p>
+                </div>
+                <div class="feature-card">
+                    <h3>💳 Auto Insurance Verification</h3>
+                    <p>Automatically verifies insurance coverage and eligibility before appointments</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📱 Patient Communication</h3>
+                    <p>Automated SMS and email reminders with personalized messages and rescheduling options</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📋 Medical Record Management</h3>
+                    <p>AI-powered organization and retrieval of patient records with smart search capabilities</p>
+                </div>
+                <div class="feature-card">
+                    <h3>💊 Prescription Management</h3>
+                    <p>Automated prescription refill reminders and medication adherence tracking</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📊 Analytics Dashboard</h3>
+                    <p>Real-time insights into patient flow, appointment patterns, and operational efficiency</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="demo-note">
+            <strong>🎯 Demo Note:</strong> This is a demonstration of AI-powered healthcare automation features. All patient data and appointments shown are simulated for demonstration purposes.
+        </div>
+    </div>
+    
+    <script>
+        function bookAppointment() {
+            alert('🎉 Appointment booked successfully! You will receive a confirmation SMS and email shortly. The AI system has automatically verified your insurance and added the appointment to your calendar.');
+        }
+    </script>
+</body>
+</html>

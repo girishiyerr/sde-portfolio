@@ -124,21 +124,21 @@ const Experience = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-12 lg:mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
             My Professional <span className="gradient-text">Journey</span>
           </h2>
-          <p className="text-lg text-dark-600 dark:text-dark-400 max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg text-dark-600 dark:text-dark-400 max-w-3xl mx-auto px-4">
             A timeline of my professional experience, technical expertise, and achievements that demonstrate my commitment to delivering exceptional results and continuous learning.
           </p>
         </motion.div>
 
         <div className="relative">
           {/* Timeline Line */}
-          <div className="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-primary-500 to-secondary-500"></div>
+          <div className="absolute left-6 sm:left-8 md:left-1/2 transform md:-translate-x-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-primary-500 to-secondary-500"></div>
 
-          <div className="space-y-12">
+          <div className="space-y-8 lg:space-y-12">
             {experiences.map((experience, index) => (
               <motion.div
                 key={`${experience.title}-${experience.company}`}
@@ -150,13 +150,13 @@ const Experience = () => {
                 }`}
               >
                 {/* Timeline Dot */}
-                <div className="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 w-4 h-4 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-full border-4 border-white dark:border-dark-800 z-10"></div>
+                <div className="absolute left-6 sm:left-8 md:left-1/2 transform md:-translate-x-1/2 w-3 h-3 sm:w-4 sm:h-4 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-full border-2 sm:border-4 border-white dark:border-dark-800 z-10"></div>
 
                 {/* Content Card */}
-                <div className={`ml-16 md:ml-0 md:w-5/12 ${index % 2 === 0 ? 'md:mr-auto md:pr-8' : 'md:ml-auto md:pl-8'}`}>
+                <div className={`ml-12 sm:ml-16 md:ml-0 md:w-5/12 ${index % 2 === 0 ? 'md:mr-auto md:pr-8' : 'md:ml-auto md:pl-8'}`}>
                   <motion.div
                     whileHover={{ scale: 1.02, y: -5 }}
-                    className="bg-white dark:bg-dark-700 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-100 dark:border-dark-600"
+                    className="bg-white dark:bg-dark-700 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-4 sm:p-6 border border-gray-100 dark:border-dark-600"
                   >
                     {/* Type Badge */}
                     <div className="flex items-center justify-between mb-4">
@@ -176,36 +176,36 @@ const Experience = () => {
                     </div>
 
                     {/* Title and Company */}
-                    <h3 className="text-xl font-bold text-dark-800 dark:text-dark-200 mb-2">
+                    <h3 className="text-lg sm:text-xl font-bold text-dark-800 dark:text-dark-200 mb-2">
                       {experience.title}
                     </h3>
-                    <h4 className="text-lg font-semibold text-primary-600 dark:text-primary-400 mb-3">
+                    <h4 className="text-base sm:text-lg font-semibold text-primary-600 dark:text-primary-400 mb-3">
                       {experience.company}
                     </h4>
 
                     {/* Location and Period */}
-                    <div className="flex items-center gap-4 text-sm text-dark-600 dark:text-dark-400 mb-4">
+                    <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 text-xs sm:text-sm text-dark-600 dark:text-dark-400 mb-4">
                       <div className="flex items-center gap-1">
-                        <MapPin size={14} />
+                        <MapPin size={12} className="sm:w-3.5 sm:h-3.5" />
                         {experience.location}
                       </div>
                       <div className="flex items-center gap-1">
-                        <Calendar size={14} />
+                        <Calendar size={12} className="sm:w-3.5 sm:h-3.5" />
                         {experience.period}
                       </div>
                     </div>
 
                     {/* Description */}
-                    <p className="text-dark-600 dark:text-dark-400 mb-4 leading-relaxed">
+                    <p className="text-sm sm:text-base text-dark-600 dark:text-dark-400 mb-4 leading-relaxed">
                       {experience.description}
                     </p>
 
                     {/* Technologies */}
                     <div className="mb-4">
-                      <h5 className="text-sm font-semibold text-dark-700 dark:text-dark-300 mb-2">
+                      <h5 className="text-xs sm:text-sm font-semibold text-dark-700 dark:text-dark-300 mb-2">
                         Technologies:
                       </h5>
-                      <div className="flex flex-wrap gap-2">
+                      <div className="flex flex-wrap gap-1 sm:gap-2">
                         {experience.technologies.map((tech) => (
                           <span
                             key={tech}
@@ -219,12 +219,12 @@ const Experience = () => {
 
                     {/* Achievements */}
                     <div>
-                      <h5 className="text-sm font-semibold text-dark-700 dark:text-dark-300 mb-2">
+                      <h5 className="text-xs sm:text-sm font-semibold text-dark-700 dark:text-dark-300 mb-2">
                         Key Achievements:
                       </h5>
                       <ul className="space-y-1">
                         {experience.achievements.map((achievement, idx) => (
-                          <li key={idx} className="text-sm text-dark-600 dark:text-dark-400 flex items-start gap-2">
+                          <li key={idx} className="text-xs sm:text-sm text-dark-600 dark:text-dark-400 flex items-start gap-2">
                             <span className="text-primary-500 mt-1">•</span>
                             {achievement}
                           </li>
@@ -243,13 +243,13 @@ const Experience = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 1 }}
-          className="text-center mt-16"
+          className="text-center mt-12 lg:mt-16"
         >
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
-            className="inline-block px-8 py-3 bg-gradient-to-r from-primary-500 to-secondary-500 text-white rounded-lg font-semibold hover:from-primary-600 hover:to-secondary-600 transition-all duration-300 shadow-lg hover:shadow-xl"
+            className="inline-block px-6 sm:px-8 py-3 bg-gradient-to-r from-primary-500 to-secondary-500 text-white rounded-lg font-semibold hover:from-primary-600 hover:to-secondary-600 transition-all duration-300 shadow-lg hover:shadow-xl text-sm sm:text-base"
           >
             Let's Work Together
           </motion.button>

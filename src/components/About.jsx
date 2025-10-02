@@ -33,27 +33,28 @@ const About = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-12 lg:mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
             About <span className="gradient-text">Me</span>
           </h2>
-          <p className="text-lg text-dark-600 dark:text-dark-400 max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg text-dark-600 dark:text-dark-400 max-w-3xl mx-auto px-4">
             Learn about my journey in customer success, web development, and AI implementation that drives business growth and operational excellence.
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-12 lg:mb-16">
           {/* Left Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
+            className="order-2 lg:order-1"
           >
-            <h3 className="text-2xl font-bold mb-6 text-dark-800 dark:text-dark-200">
+            <h3 className="text-xl sm:text-2xl font-bold mb-4 lg:mb-6 text-dark-800 dark:text-dark-200 text-center lg:text-left">
               Who I Am
             </h3>
-            <div className="space-y-4 text-dark-600 dark:text-dark-400">
+            <div className="space-y-3 lg:space-y-4 text-dark-600 dark:text-dark-400 text-sm sm:text-base">
               <p>
                 I'm a results-driven professional with 4+ years of experience in customer success and process optimization. 
                 Currently working as a Customer Success Specialist at Amazon Development Centre India, where I deliver 
@@ -77,7 +78,7 @@ const About = () => {
             initial={{ opacity: 0, x: 50 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="grid grid-cols-2 gap-6"
+            className="grid grid-cols-2 gap-4 sm:gap-6 order-1 lg:order-2"
           >
             {stats.map((stat, index) => (
               <motion.div
@@ -85,10 +86,10 @@ const About = () => {
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={inView ? { opacity: 1, scale: 1 } : {}}
                 transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
-                className="text-center p-6 bg-gradient-to-br from-primary-50 to-secondary-50 dark:from-primary-900/20 dark:to-secondary-900/20 rounded-xl border border-primary-100 dark:border-primary-800/30"
+                className="text-center p-4 sm:p-6 bg-gradient-to-br from-primary-50 to-secondary-50 dark:from-primary-900/20 dark:to-secondary-900/20 rounded-xl border border-primary-100 dark:border-primary-800/30"
               >
-                <div className="text-3xl font-bold gradient-text mb-2">{stat.value}</div>
-                <div className="text-sm text-dark-600 dark:text-dark-400">{stat.label}</div>
+                <div className="text-2xl sm:text-3xl font-bold gradient-text mb-1 sm:mb-2">{stat.value}</div>
+                <div className="text-xs sm:text-sm text-dark-600 dark:text-dark-400">{stat.label}</div>
               </motion.div>
             ))}
           </motion.div>
@@ -99,12 +100,12 @@ const About = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="text-center mb-12"
+          className="text-center mb-10 lg:mb-12"
         >
-          <h3 className="text-2xl font-bold mb-8 text-dark-800 dark:text-dark-200">
+          <h3 className="text-xl sm:text-2xl font-bold mb-6 lg:mb-8 text-dark-800 dark:text-dark-200">
             Beyond <span className="gradient-text">Professional Work</span>
           </h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {interests.map((interest, index) => (
               <motion.div
                 key={interest.title}
@@ -112,15 +113,15 @@ const About = () => {
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
                 whileHover={{ scale: 1.05, y: -5 }}
-                className="p-6 bg-white dark:bg-dark-700 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-dark-600"
+                className="p-4 sm:p-6 bg-white dark:bg-dark-700 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-dark-600"
               >
-                <div className="w-12 h-12 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <interest.icon size={24} className="text-white" />
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-lg flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                  <interest.icon size={20} className="text-white sm:w-6 sm:h-6" />
                 </div>
-                <h4 className="text-lg font-semibold mb-2 text-dark-800 dark:text-dark-200">
+                <h4 className="text-base sm:text-lg font-semibold mb-2 text-dark-800 dark:text-dark-200">
                   {interest.title}
                 </h4>
-                <p className="text-dark-600 dark:text-dark-400 text-sm">
+                <p className="text-dark-600 dark:text-dark-400 text-xs sm:text-sm">
                   {interest.description}
                 </p>
               </motion.div>
@@ -135,45 +136,45 @@ const About = () => {
           transition={{ duration: 0.8, delay: 1 }}
           className="text-center"
         >
-          <h3 className="text-2xl font-bold mb-8 text-dark-800 dark:text-dark-200">
+          <h3 className="text-xl sm:text-2xl font-bold mb-6 lg:mb-8 text-dark-800 dark:text-dark-200">
             What I <span className="gradient-text">Do</span>
           </h3>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             <motion.div
               whileHover={{ scale: 1.05 }}
-              className="p-6 bg-gradient-to-br from-primary-500 to-primary-600 rounded-xl text-white"
+              className="p-4 sm:p-6 bg-gradient-to-br from-primary-500 to-primary-600 rounded-xl text-white"
             >
-              <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <Code size={24} />
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white/20 rounded-lg flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                <Code size={20} className="sm:w-6 sm:h-6" />
               </div>
-              <h4 className="text-lg font-semibold mb-2">Customer Success</h4>
-              <p className="text-primary-100 text-sm">
+              <h4 className="text-base sm:text-lg font-semibold mb-2">Customer Success</h4>
+              <p className="text-primary-100 text-xs sm:text-sm">
                 Delivering exceptional support with 95%+ resolution rates and top 10% performance metrics.
               </p>
             </motion.div>
 
             <motion.div
               whileHover={{ scale: 1.05 }}
-              className="p-6 bg-gradient-to-br from-secondary-500 to-secondary-600 rounded-xl text-white"
+              className="p-4 sm:p-6 bg-gradient-to-br from-secondary-500 to-secondary-600 rounded-xl text-white"
             >
-              <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <Code size={24} />
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white/20 rounded-lg flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                <Code size={20} className="sm:w-6 sm:h-6" />
               </div>
-              <h4 className="text-lg font-semibold mb-2">Process Optimization</h4>
-              <p className="text-secondary-100 text-sm">
+              <h4 className="text-base sm:text-lg font-semibold mb-2">Process Optimization</h4>
+              <p className="text-secondary-100 text-xs sm:text-sm">
                 Implementing process improvements that reduce handling time by 20% and improve efficiency.
               </p>
             </motion.div>
 
             <motion.div
               whileHover={{ scale: 1.05 }}
-              className="p-6 bg-gradient-to-br from-primary-600 to-secondary-600 rounded-xl text-white"
+              className="p-4 sm:p-6 bg-gradient-to-br from-primary-600 to-secondary-600 rounded-xl text-white sm:col-span-2 lg:col-span-1"
             >
-              <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <Code size={24} />
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white/20 rounded-lg flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                <Code size={20} className="sm:w-6 sm:h-6" />
               </div>
-              <h4 className="text-lg font-semibold mb-2">Team Leadership</h4>
-              <p className="text-primary-100 text-sm">
+              <h4 className="text-base sm:text-lg font-semibold mb-2">Team Leadership</h4>
+              <p className="text-primary-100 text-xs sm:text-sm">
                 Mentoring and training team members with 95% successful onboarding and performance improvement.
               </p>
             </motion.div>

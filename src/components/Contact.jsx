@@ -122,29 +122,30 @@ Please try again later or contact me directly at: girishiyerr@gmail.com`)
           initial={{ opacity: 0, y: 50 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-12 lg:mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
             Let's <span className="gradient-text">Connect</span>
           </h2>
-          <p className="text-lg text-dark-600 dark:text-dark-400 max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg text-dark-600 dark:text-dark-400 max-w-3xl mx-auto px-4">
             Ready to transform your business with AI? Let's discuss how I can help you automate processes, 
             build intelligent solutions, and drive growth through strategic AI implementation.
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
           {/* Contact Information */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
+            className="order-2 lg:order-1"
           >
-            <h3 className="text-2xl font-bold text-dark-800 dark:text-dark-200 mb-8">
+            <h3 className="text-xl sm:text-2xl font-bold text-dark-800 dark:text-dark-200 mb-6 lg:mb-8 text-center lg:text-left">
               Start Your AI Journey
             </h3>
             
-            <div className="space-y-6 mb-8">
+            <div className="space-y-4 sm:space-y-6 mb-6 lg:mb-8">
               {contactInfo.map((info, index) => (
                 <motion.a
                   key={info.title}
@@ -153,16 +154,16 @@ Please try again later or contact me directly at: girishiyerr@gmail.com`)
                   animate={inView ? { opacity: 1, x: 0 } : {}}
                   transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
                   whileHover={{ scale: 1.02, x: 5 }}
-                  className="flex items-center gap-4 p-4 bg-white dark:bg-dark-700 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100 dark:border-dark-600 group"
+                  className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 bg-white dark:bg-dark-700 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100 dark:border-dark-600 group"
                 >
-                  <div className={`w-12 h-12 bg-gradient-to-r ${info.color} rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-                    <info.icon size={24} className="text-white" />
+                  <div className={`w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r ${info.color} rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+                    <info.icon size={20} className="text-white sm:w-6 sm:h-6" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-dark-800 dark:text-dark-200">
+                    <h4 className="text-sm sm:text-base font-semibold text-dark-800 dark:text-dark-200">
                       {info.title}
                     </h4>
-                    <p className="text-dark-600 dark:text-dark-400">
+                    <p className="text-xs sm:text-sm text-dark-600 dark:text-dark-400">
                       {info.value}
                     </p>
                   </div>
@@ -177,16 +178,16 @@ Please try again later or contact me directly at: girishiyerr@gmail.com`)
             initial={{ opacity: 0, x: 50 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="bg-white dark:bg-dark-700 rounded-xl shadow-xl p-8 border border-gray-100 dark:border-dark-600"
+            className="bg-white dark:bg-dark-700 rounded-xl shadow-xl p-4 sm:p-6 lg:p-8 border border-gray-100 dark:border-dark-600 order-1 lg:order-2"
           >
-            <h3 className="text-2xl font-bold text-dark-800 dark:text-dark-200 mb-6">
+            <h3 className="text-xl sm:text-2xl font-bold text-dark-800 dark:text-dark-200 mb-4 sm:mb-6 text-center lg:text-left">
               Discuss Your AI Project
             </h3>
             
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-6">
+            <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
+              <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-dark-700 dark:text-dark-300 mb-2">
+                  <label htmlFor="name" className="block text-xs sm:text-sm font-medium text-dark-700 dark:text-dark-300 mb-2">
                     Name
                   </label>
                   <input
@@ -196,13 +197,13 @@ Please try again later or contact me directly at: girishiyerr@gmail.com`)
                     value={formData.name}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-dark-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-dark-800 text-dark-800 dark:text-dark-200 transition-colors duration-200"
+                    className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 dark:border-dark-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-dark-800 text-dark-800 dark:text-dark-200 transition-colors duration-200 text-sm sm:text-base"
                     placeholder="Your name"
                   />
                 </div>
                 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-dark-700 dark:text-dark-300 mb-2">
+                  <label htmlFor="email" className="block text-xs sm:text-sm font-medium text-dark-700 dark:text-dark-300 mb-2">
                     Email
                   </label>
                   <input
@@ -212,14 +213,14 @@ Please try again later or contact me directly at: girishiyerr@gmail.com`)
                     value={formData.email}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-dark-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-dark-800 text-dark-800 dark:text-dark-200 transition-colors duration-200"
+                    className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 dark:border-dark-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-dark-800 text-dark-800 dark:text-dark-200 transition-colors duration-200 text-sm sm:text-base"
                     placeholder="your.email@example.com"
                   />
                 </div>
               </div>
               
               <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-dark-700 dark:text-dark-300 mb-2">
+                <label htmlFor="subject" className="block text-xs sm:text-sm font-medium text-dark-700 dark:text-dark-300 mb-2">
                   Subject
                 </label>
                 <input
@@ -229,13 +230,13 @@ Please try again later or contact me directly at: girishiyerr@gmail.com`)
                   value={formData.subject}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-dark-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-dark-800 text-dark-800 dark:text-dark-200 transition-colors duration-200"
+                  className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 dark:border-dark-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-dark-800 text-dark-800 dark:text-dark-200 transition-colors duration-200 text-sm sm:text-base"
                   placeholder="AI automation, website, or consulting?"
                 />
               </div>
               
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-dark-700 dark:text-dark-300 mb-2">
+                <label htmlFor="message" className="block text-xs sm:text-sm font-medium text-dark-700 dark:text-dark-300 mb-2">
                   Message
                 </label>
                 <textarea
@@ -244,8 +245,8 @@ Please try again later or contact me directly at: girishiyerr@gmail.com`)
                   value={formData.message}
                   onChange={handleInputChange}
                   required
-                  rows={6}
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-dark-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-dark-800 text-dark-800 dark:text-dark-200 transition-colors duration-200 resize-none"
+                  rows={5}
+                  className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 dark:border-dark-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-dark-800 text-dark-800 dark:text-dark-200 transition-colors duration-200 resize-none text-sm sm:text-base"
                   placeholder="Describe your business challenges and AI goals..."
                 />
               </div>
@@ -255,7 +256,7 @@ Please try again later or contact me directly at: girishiyerr@gmail.com`)
                 disabled={isSubmitting}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="w-full px-8 py-4 bg-gradient-to-r from-primary-500 to-secondary-500 text-white rounded-lg font-semibold hover:from-primary-600 hover:to-secondary-600 transition-all duration-300 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                className="w-full px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-primary-500 to-secondary-500 text-white rounded-lg font-semibold hover:from-primary-600 hover:to-secondary-600 transition-all duration-300 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 text-sm sm:text-base"
               >
                 {isSubmitting ? (
                   <>
@@ -278,29 +279,29 @@ Please try again later or contact me directly at: girishiyerr@gmail.com`)
           initial={{ opacity: 0, y: 50 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.8 }}
-          className="mt-20 text-center"
+          className="mt-16 lg:mt-20 text-center"
         >
-          <div className="bg-gradient-to-r from-primary-500 to-secondary-500 rounded-2xl p-12 text-white relative overflow-hidden">
+          <div className="bg-gradient-to-r from-primary-500 to-secondary-500 rounded-2xl p-6 sm:p-8 lg:p-12 text-white relative overflow-hidden">
             {/* Background Elements */}
             <div className="absolute inset-0 bg-gradient-to-r from-primary-600 to-secondary-600 opacity-20"></div>
             <div className="absolute -top-10 -right-10 w-40 h-40 bg-white/10 rounded-full blur-3xl"></div>
             <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-white/10 rounded-full blur-3xl"></div>
             
             <div className="relative z-10">
-              <h3 className="text-3xl md:text-4xl font-bold mb-4">
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
                 Ready to Transform Your Business?
               </h3>
-              <p className="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
+              <p className="text-base sm:text-lg lg:text-xl text-primary-100 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
                 Let's discuss how AI can revolutionize your business operations. From automation to intelligent websites, 
                 I'll help you implement solutions that drive real results and measurable growth.
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="px-8 py-4 bg-white text-primary-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300 shadow-lg hover:shadow-xl"
+                  className="px-6 sm:px-8 py-3 sm:py-4 bg-white text-primary-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300 shadow-lg hover:shadow-xl text-sm sm:text-base"
                 >
                   Start Your AI Journey
                 </motion.button>
@@ -309,7 +310,7 @@ Please try again later or contact me directly at: girishiyerr@gmail.com`)
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   href="#projects"
-                  className="px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-all duration-300"
+                  className="px-6 sm:px-8 py-3 sm:py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-all duration-300 text-sm sm:text-base"
                 >
                   View Case Studies
                 </motion.a>

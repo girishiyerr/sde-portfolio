@@ -78,13 +78,13 @@ const Hero = () => {
       ))}
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-left"
+            className="text-center lg:text-left order-2 lg:order-1"
           >
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -101,7 +101,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 lg:mb-6"
             >
               Hi, I'm{' '}
               <span className="gradient-text">Girish Iyer</span>
@@ -111,7 +111,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
-              className="text-2xl md:text-3xl text-dark-600 dark:text-dark-300 mb-8 h-12"
+              className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-dark-600 dark:text-dark-300 mb-6 lg:mb-8 h-8 sm:h-10 lg:h-12"
             >
               <AnimatePresence mode="wait">
                 <motion.span
@@ -131,7 +131,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.8 }}
-              className="text-lg text-dark-600 dark:text-dark-400 mb-8 max-w-2xl"
+              className="text-base sm:text-lg text-dark-600 dark:text-dark-400 mb-6 lg:mb-8 max-w-2xl mx-auto lg:mx-0"
             >
               Results-driven professional with 4+ years of experience in customer success, process optimization, 
               and stakeholder management. I specialize in delivering exceptional customer outcomes, improving operational 
@@ -143,25 +143,25 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1 }}
-              className="flex flex-wrap gap-4 mb-8"
+              className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-6 lg:mb-8 justify-center lg:justify-start"
             >
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-3 bg-gradient-to-r from-primary-500 to-primary-600 text-white rounded-lg font-semibold hover:from-primary-600 hover:to-primary-700 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center gap-2"
+                className="px-6 sm:px-8 py-3 bg-gradient-to-r from-primary-500 to-primary-600 text-white rounded-lg font-semibold hover:from-primary-600 hover:to-primary-700 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center gap-2 text-sm sm:text-base"
                 onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
               >
-                <Mail size={20} />
+                <Mail size={18} />
                 Get In Touch
               </motion.button>
               
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-3 border-2 border-primary-500 text-primary-500 dark:text-primary-400 rounded-lg font-semibold hover:bg-primary-500 hover:text-white transition-all duration-300 flex items-center gap-2"
+                className="px-6 sm:px-8 py-3 border-2 border-primary-500 text-primary-500 dark:text-primary-400 rounded-lg font-semibold hover:bg-primary-500 hover:text-white transition-all duration-300 flex items-center justify-center gap-2 text-sm sm:text-base"
                 onClick={() => document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' })}
               >
-                <Download size={20} />
+                <Download size={18} />
                 View My Work
               </motion.button>
             </motion.div>
@@ -173,7 +173,7 @@ const Hero = () => {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="flex justify-center lg:justify-end"
+            className="flex justify-center lg:justify-end order-1 lg:order-2"
           >
             <div className="relative">
               {/* Profile Image Container */}
@@ -186,7 +186,7 @@ const Hero = () => {
                   repeat: Infinity,
                   ease: "easeInOut"
                 }}
-                className="relative w-80 h-80 lg:w-[420px] lg:h-[420px]"
+                className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-[420px] lg:h-[420px]"
               >
                 {/* Background Circle */}
                 <div className="absolute inset-0 bg-gradient-to-br from-primary-400 to-secondary-400 rounded-full blur-xl opacity-20 animate-pulse" />
@@ -214,9 +214,9 @@ const Hero = () => {
                     repeat: Infinity,
                     ease: "linear"
                   }}
-                  className="absolute -top-4 -right-4 w-16 h-16 bg-white dark:bg-dark-800 rounded-full shadow-lg flex items-center justify-center border-2 border-primary-500"
+                  className="absolute -top-2 -right-2 sm:-top-4 sm:-right-4 w-12 h-12 sm:w-16 sm:h-16 bg-white dark:bg-dark-800 rounded-full shadow-lg flex items-center justify-center border-2 border-primary-500"
                 >
-                  <span className="text-xs font-bold text-primary-600 dark:text-primary-400">AI</span>
+                  <span className="text-xs font-bold text-primary-600 dark:text-primary-400">CS</span>
                 </motion.div>
 
                 <motion.div
@@ -228,9 +228,9 @@ const Hero = () => {
                     repeat: Infinity,
                     ease: "linear"
                   }}
-                  className="absolute -bottom-4 -left-4 w-16 h-16 bg-white dark:bg-dark-800 rounded-full shadow-lg flex items-center justify-center border-2 border-secondary-500"
+                  className="absolute -bottom-2 -left-2 sm:-bottom-4 sm:-left-4 w-12 h-12 sm:w-16 sm:h-16 bg-white dark:bg-dark-800 rounded-full shadow-lg flex items-center justify-center border-2 border-secondary-500"
                 >
-                  <span className="text-xs font-bold text-secondary-600 dark:text-secondary-400">Auto</span>
+                  <span className="text-xs font-bold text-secondary-600 dark:text-secondary-400">Ops</span>
                 </motion.div>
               </motion.div>
             </div>
