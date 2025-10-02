@@ -143,7 +143,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1 }}
-              className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-6 lg:mb-8 justify-center lg:justify-start"
+              className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-12 sm:mb-16 lg:mb-8 justify-center lg:justify-start"
             >
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -242,15 +242,15 @@ const Hero = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1.5 }}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+          className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 z-10"
         >
           <motion.button
             onClick={scrollToNext}
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
-            className="p-2 rounded-full bg-white/20 dark:bg-dark-800/20 backdrop-blur-sm border border-white/20 dark:border-dark-700/20 hover:bg-white/30 dark:hover:bg-dark-800/30 transition-all duration-200"
+            className="p-2 sm:p-3 rounded-full bg-white/20 dark:bg-dark-800/20 backdrop-blur-sm border border-white/20 dark:border-dark-700/20 hover:bg-white/30 dark:hover:bg-dark-800/30 transition-all duration-200 shadow-lg"
           >
-            <ChevronDown size={24} className="text-dark-600 dark:text-dark-400" />
+            <ChevronDown size={20} className="text-dark-600 dark:text-dark-400 sm:w-6 sm:h-6" />
           </motion.button>
         </motion.div>
       </div>
